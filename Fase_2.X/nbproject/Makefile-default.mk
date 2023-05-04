@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c TITIMER.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c TITIMER.c TLCD.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/TITIMER.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/TITIMER.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/TITIMER.p1 ${OBJECTDIR}/TLCD.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/TITIMER.p1.d ${OBJECTDIR}/TLCD.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/TITIMER.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/TITIMER.p1 ${OBJECTDIR}/TLCD.p1
 
 # Source Files
-SOURCEFILES=main.c TITIMER.c
+SOURCEFILES=main.c TITIMER.c TLCD.c
 
 
 
@@ -110,6 +110,14 @@ ${OBJECTDIR}/TITIMER.p1: TITIMER.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/TITIMER.d ${OBJECTDIR}/TITIMER.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/TITIMER.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/TLCD.p1: TLCD.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TLCD.p1.d 
+	@${RM} ${OBJECTDIR}/TLCD.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3    -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/TLCD.p1 TLCD.c 
+	@-${MV} ${OBJECTDIR}/TLCD.d ${OBJECTDIR}/TLCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/TLCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -126,6 +134,14 @@ ${OBJECTDIR}/TITIMER.p1: TITIMER.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c    -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/TITIMER.p1 TITIMER.c 
 	@-${MV} ${OBJECTDIR}/TITIMER.d ${OBJECTDIR}/TITIMER.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/TITIMER.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/TLCD.p1: TLCD.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TLCD.p1.d 
+	@${RM} ${OBJECTDIR}/TLCD.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c    -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/TLCD.p1 TLCD.c 
+	@-${MV} ${OBJECTDIR}/TLCD.d ${OBJECTDIR}/TLCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/TLCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "TITIMER.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,13 +6,47 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "TITIMER.c" 2
 
 
 
 
 
 
+# 1 "./TITIMER.h" 1
+# 24 "./TITIMER.h"
+void RSI_Timer0(void);
+
+void TiInit (void);
+
+
+
+
+
+char TiGetTimer (void);
+
+
+
+
+
+
+void TiResetTics (unsigned char Handle);
+
+
+
+
+
+
+unsigned int TiGetTics (unsigned char Handle);
+# 55 "./TITIMER.h"
+void TiCloseTimer (unsigned char Handle);
+
+
+
+
+
+void TiEnd (void);
+# 7 "TITIMER.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\proc\\pic18f4321.h" 1 3
 # 45 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\proc\\pic18f4321.h" 3
@@ -4365,352 +4399,89 @@ extern volatile __bit nWR __attribute__((address(0x7C21)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 8 "main.c" 2
+# 8 "TITIMER.c" 2
+# 18 "TITIMER.c"
+typedef unsigned char BYTE;
+typedef unsigned short WORD;
+# 28 "TITIMER.c"
+struct Timer {
+ unsigned int h_TicsInicials;
+ unsigned char b_busy;
+} s_Timers[20];
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
+static unsigned int h_Tics=0;
+static int counter;
+# 44 "TITIMER.c"
+void RSI_Timer0 (void) {
 
-extern double __fpnormalize(double);
 
+     INTCONbits.TMR0IF = 0;
 
+        TMR0H = 0xEF;
+        TMR0L = 0xBB;
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\xc8debug.h" 1 3
 
+ h_Tics++;
 
+ if (h_Tics>=30000) {
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-
-void *malloc (size_t);
-void *calloc (size_t, size_t);
-void *realloc (void *, size_t);
-void free (void *);
-
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-
-
-
-
-
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\xc8debug.h" 2 3
-
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\builtins.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\builtins.h" 2 3
-
-
-
-#pragma intrinsic(__nop)
-extern void __nop(void);
-
-
-#pragma intrinsic(_delay)
-extern __attribute__((nonreentrant)) void _delay(uint32_t);
-#pragma intrinsic(_delaywdt)
-extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
-
-#pragma intrinsic(_delay3)
-extern __attribute__((nonreentrant)) void _delay3(uint8_t);
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
-# 33 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 2 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18_chip_select.h" 1 3
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 2 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 3
-__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\errata.h" 1 3
-# 27 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 2 3
-# 156 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 3
-__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
-__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
-__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
-# 192 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 3
-unsigned char __t1rd16on(void);
-unsigned char __t3rd16on(void);
-# 33 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
-
-# 1 "./TITIMER.h" 1
-# 24 "./TITIMER.h"
-void RSI_Timer0(void);
-
-void TiInit (void);
-
-
-
-
-
-char TiGetTimer (void);
-
-
-
-
-
-
-void TiResetTics (unsigned char Handle);
-
-
-
-
-
-
-unsigned int TiGetTics (unsigned char Handle);
-# 55 "./TITIMER.h"
-void TiCloseTimer (unsigned char Handle);
-
-
-
-
-
-void TiEnd (void);
-# 10 "main.c" 2
-
-
-void __attribute__((picinterrupt(("high_priority")))) RSI_High(void);
-void main(void);
-void InitSistema(void);
-void InitTeclado(void);
-void initCPU(void){
-
-#pragma config OSC = HSPLL
-#pragma config PBADEN = DIG
-#pragma config MCLRE = ON
-#pragma config DEBUG = OFF
-#pragma config PWRT = OFF
-#pragma config BOR = OFF
-#pragma config WDT = OFF
-#pragma config LVP = OFF
-
-}
-
-int tick_count;
-
-
-
-void __attribute__((picinterrupt(("high_priority")))) RSI_High(void){
-    if(INTCONbits.TMR0IF == 1) RSI_Timer0();
-
-}
-
-static char t;
-static char mask;
-
-void main(void) {
-
-    initCPU();
-    InitSistema();
-
-    while(1){
-# 56 "main.c"
+  for (counter=0;counter<20;counter++)
+   if (s_Timers[counter].b_busy==1)
+    s_Timers[counter].h_TicsInicials -= h_Tics;
+  h_Tics=0;
  }
-    return;
+
+}
+# 72 "TITIMER.c"
+void TiInit () {
+ unsigned char counter;
+ for (counter=0;counter<20;counter++) {
+  s_Timers[counter].b_busy=0;
+ }
+ h_Tics=0;
+
+
+ T0CONbits.T08BIT=0;
+ T0CONbits.T0CS = 0;
+ T0CONbits.PSA = 1;
+
+
+    TMR0H = 0xEF;
+    TMR0L = 0xBB;
+
+ T0CONbits.TMR0ON = 1;
+
+ INTCONbits.TMR0IF = 0;
+ INTCONbits.TMR0IE = 1;
 }
 
-void InitSistema(void){
+char TiGetTimer() {
+ unsigned char counter=0;
+ while (s_Timers[counter].b_busy==1) {
+  counter++;
+  if (counter == 20) return -1;
+ }
+ s_Timers[counter].b_busy=1;
+ return (counter);
+}
 
-    TRISA = 0x07;
-    ADCON0bits.ADON = 1;
-    ADCON1 = 0x0C;
-    ADCON2 = 0x0E;
+void TiResetTics (unsigned char Handle) {
 
-    TRISB = 0x0F;
+ s_Timers[Handle].h_TicsInicials=h_Tics;
 
-    TRISC = 0x80;
+}
 
-    INTCON = 0xE0;
-    RCONbits.IPEN = 0;
-    INTCON2bits.RBPU = 0;
-    INTCON3 = 0x00;
-    LATA = 0;
-    LATAbits.LATA4 = 0;
-# 89 "main.c"
+
+unsigned int TiGetTics (unsigned char Handle) {
+volatile unsigned int actual;
+ actual=h_Tics;
+ return (actual-(s_Timers[Handle].h_TicsInicials));
+}
+
+void TiCloseTimer (unsigned char Handle) {
+ s_Timers[Handle].b_busy=0;
+}
+
+
+void TiEnd () {
 }

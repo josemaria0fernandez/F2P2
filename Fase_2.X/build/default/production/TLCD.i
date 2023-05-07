@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "TLCD.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,77 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "TLCD.c" 2
+# 21 "TLCD.c"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\xc8debug.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int wchar_t;
+# 122 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 168 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 204 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+int atoi (const char *);
+long atol (const char *);
+long long atoll (const char *);
+double atof (const char *);
+
+float strtof (const char *restrict, char **restrict);
+double strtod (const char *restrict, char **restrict);
+long double strtold (const char *restrict, char **restrict);
+
+
+
+long strtol (const char *restrict, char **restrict, int);
+unsigned long strtoul (const char *restrict, char **restrict, int);
+long long strtoll (const char *restrict, char **restrict, int);
+unsigned long long strtoull (const char *restrict, char **restrict, int);
+
+int rand (void);
+void srand (unsigned);
+
+void *malloc (size_t);
+void *calloc (size_t, size_t);
+void *realloc (void *, size_t);
+void free (void *);
+
+          void abort (void);
+int atexit (void (*) (void));
+          void exit (int);
+          void _Exit (int);
+
+void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
 
 
 
@@ -14,6 +84,160 @@
 
 
 
+__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
+
+int abs (int);
+long labs (long);
+long long llabs (long long);
+
+typedef struct { int quot, rem; } div_t;
+typedef struct { long quot, rem; } ldiv_t;
+typedef struct { long long quot, rem; } lldiv_t;
+
+div_t div (int, int);
+ldiv_t ldiv (long, long);
+lldiv_t lldiv (long long, long long);
+
+typedef struct { unsigned int quot, rem; } udiv_t;
+typedef struct { unsigned long quot, rem; } uldiv_t;
+udiv_t udiv (unsigned int, unsigned int);
+uldiv_t uldiv (unsigned long, unsigned long);
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\xc8debug.h" 2 3
+
+
+
+
+
+
+
+
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\builtins.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 173 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 209 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\builtins.h" 2 3
+
+
+
+#pragma intrinsic(__nop)
+extern void __nop(void);
+
+
+#pragma intrinsic(_delay)
+extern __attribute__((nonreentrant)) void _delay(uint32_t);
+#pragma intrinsic(_delaywdt)
+extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
+
+#pragma intrinsic(_delay3)
+extern __attribute__((nonreentrant)) void _delay3(uint8_t);
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\htc.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 2 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18_chip_select.h" 1 3
+# 590 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18_chip_select.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\proc\\pic18f4321.h" 1 3
 # 45 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\proc\\pic18f4321.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\__at.h" 1 3
@@ -4365,237 +4589,7 @@ extern volatile __bit nWR __attribute__((address(0x7C21)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 8 "main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\xc8debug.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-
-void *malloc (size_t);
-void *calloc (size_t, size_t);
-void *realloc (void *, size_t);
-void free (void *);
-
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-
-
-
-
-
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\xc8debug.h" 2 3
-
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\builtins.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\builtins.h" 2 3
-
-
-
-#pragma intrinsic(__nop)
-extern void __nop(void);
-
-
-#pragma intrinsic(_delay)
-extern __attribute__((nonreentrant)) void _delay(uint32_t);
-#pragma intrinsic(_delaywdt)
-extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
-
-#pragma intrinsic(_delay3)
-extern __attribute__((nonreentrant)) void _delay3(uint8_t);
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
-# 33 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 2 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18_chip_select.h" 1 3
+# 590 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18_chip_select.h" 2 3
 # 8 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 2 3
 # 19 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
@@ -4617,7 +4611,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
+# 21 "TLCD.c" 2
 
 # 1 "./TITIMER.h" 1
 # 24 "./TITIMER.h"
@@ -4652,65 +4646,445 @@ void TiCloseTimer (unsigned char Handle);
 
 
 void TiEnd (void);
-# 10 "main.c" 2
+# 22 "TLCD.c" 2
+
+# 1 "./TLCD.h" 1
+# 72 "./TLCD.h"
+static unsigned char *cadenaEscritura[4];
+static signed char marquesina;
+static unsigned char countImp, countFlecha;
+static unsigned char posFila, posInicio,cadenaActual;
+static unsigned int tLCD;
+static __bit StopLCD, finCadena0, finCadena2, StopUsers;
+__bit inMenu, finLCD;
+
+void LcInit(char Files, char Columnes);
+# 89 "./TLCD.h"
+void LcEnd(void);
 
 
-void __attribute__((picinterrupt(("high_priority")))) RSI_High(void);
-void main(void);
-void InitSistema(void);
-void InitTeclado(void);
-void initCPU(void){
-
-#pragma config OSC = HSPLL
-#pragma config PBADEN = DIG
-#pragma config MCLRE = ON
-#pragma config DEBUG = OFF
-#pragma config PWRT = OFF
-#pragma config BOR = OFF
-#pragma config WDT = OFF
-#pragma config LVP = OFF
-
-}
-
-int tick_count;
+void LcClear(void);
 
 
 
-void __attribute__((picinterrupt(("high_priority")))) RSI_High(void){
-    if(INTCONbits.TMR0IF == 1) RSI_Timer0();
 
-}
+void LcCursorOn(void);
 
-static char t;
-static char mask;
 
-void main(void) {
 
-    initCPU();
-    InitSistema();
+void LcCursorOff(void);
 
-    while(1){
-# 56 "main.c"
+
+
+void LcGotoXY(char Columna, char Fila);
+
+
+
+
+void LcPutChar(char c);
+# 119 "./TLCD.h"
+void LcPutString(char *s);
+
+
+
+
+
+
+void motorLCD(void);
+
+void LcPutMyString(unsigned char *primeraCadena,unsigned char *segundaCadena, unsigned char *terceraCadena, unsigned char *cuartaCadena);
+
+void stopWriting();
+
+void startMarquesina(signed char estadoMarquesina);
+
+__bit LcActMarquesina();
+
+void LcPutCharSMS(char c);
+# 23 "TLCD.c" 2
+# 45 "TLCD.c"
+static unsigned char Files, Columnes;
+static unsigned char FilaAct, ColumnaAct;
+static int Timer;
+# 56 "TLCD.c"
+void Espera(int Timer, int ms);
+void CantaIR(char IR);
+void CantaData(char Data);
+void WaitForBusy(void);
+void EscriuPrimeraOrdre(char);
+# 70 "TLCD.c"
+void LcInit(char files, char columnes) {
+# 80 "TLCD.c"
+    cadenaActual = 0;
+    posInicio = 0;
+    posFila = 0;
+    marquesina = 0;
+
+    tLCD = TiGetTimer();
+    countImp = 0;
+    StopLCD = 0;
+    StopUsers = 0;
+    finCadena0 = 0;
+    finCadena2 = 0;
+
+    countFlecha = 0;
+    finLCD = 0;
+ int i;
+ Timer = TiGetTimer();
+ Files = files; Columnes = columnes;
+ FilaAct = ColumnaAct = 0;
+ (TRISDbits.TRISD4 = TRISDbits.TRISD5 = TRISDbits.TRISD6 = 0);
+ for (i = 0; i < 2; i++) {
+  Espera(Timer, 200);
+
+
+
+  EscriuPrimeraOrdre(0x02 | 0x01);
+  Espera(Timer, 10);
+  EscriuPrimeraOrdre(0x02 | 0x01);
+  Espera(Timer, 2);
+  EscriuPrimeraOrdre(0x02 | 0x01);
+  Espera(Timer, 2);
+
+
+  EscriuPrimeraOrdre(0x02);
+  Espera(Timer, 2);
+  CantaIR(0x20 | 0x08);
+
+
+  WaitForBusy(); CantaIR(0x08);
+  WaitForBusy(); CantaIR(0x01);
+  Espera(Timer,6);
+  WaitForBusy(); CantaIR(0x04 | 0x02);
+  WaitForBusy(); CantaIR(0x08 | 0x04 | 0x02 | 0x01);
  }
-    return;
+
+
+
+
+
+
 }
 
-void InitSistema(void){
 
-    TRISA = 0x07;
-    ADCON0bits.ADON = 1;
-    ADCON1 = 0x0C;
-    ADCON2 = 0x0E;
+void LcClear(void) {
 
-    TRISB = 0x0F;
 
-    TRISC = 0x80;
 
-    INTCON = 0xE0;
-    RCONbits.IPEN = 0;
-    INTCON2bits.RBPU = 0;
-    INTCON3 = 0x00;
-    LATA = 0;
-    LATAbits.LATA4 = 0;
-# 89 "main.c"
+ WaitForBusy(); CantaIR(0x01);
+ Espera(Timer, 6);
+}
+
+void LcCursorOn(void) {
+
+
+ WaitForBusy();
+ CantaIR(0x08 | 0x04 | 0x02);
+}
+
+void LcCursorOff(void) {
+
+
+ WaitForBusy();
+ CantaIR(0x08 | 0x04);
+}
+
+
+
+void LcGotoXY(char Columna, char Fila) {
+
+
+
+ int Fisica;
+
+
+ Fisica = Columna + (!Fila ? 0 : 0x40);
+
+
+
+ WaitForBusy();
+ CantaIR(0x80 | Fisica);
+
+ FilaAct = Fila;
+ ColumnaAct = Columna;
+}
+
+void LcPutChar(char c) {
+# 183 "TLCD.c"
+ WaitForBusy(); CantaData(c);
+
+ ++ColumnaAct;
+
+  if (ColumnaAct >= 60) {
+   ColumnaAct = 0;
+   if (++FilaAct >= 2) FilaAct = 0;
+   LcGotoXY(ColumnaAct, FilaAct);
+  }
+}
+# 203 "TLCD.c"
+void Espera(int Timer, int ms) {
+ TiResetTics(Timer);
+ while(TiGetTics(Timer) < ms);
+}
+
+void CantaPartAlta(char c) {
+  (LATDbits.LATD3 = (c & 0x80 ? 1 : 0));
+  (LATDbits.LATD2 = (c & 0x40 ? 1 : 0));
+  (LATDbits.LATD1 = (c & 0x20 ? 1 : 0));
+  (LATDbits.LATD0 = (c & 0x10 ? 1 : 0));
+}
+
+void CantaPartBaixa(char c) {
+  (LATDbits.LATD3 = (c & 0x08 ? 1 : 0));
+  (LATDbits.LATD2 = (c & 0x04 ? 1 : 0));
+  (LATDbits.LATD1 = (c & 0x02 ? 1 : 0));
+  (LATDbits.LATD0 = (c & 0x01 ? 1 : 0));
+}
+
+void CantaIR(char IR) {
+ (TRISDbits.TRISD0 = TRISDbits.TRISD1 = TRISDbits.TRISD2 = TRISDbits.TRISD3 = 0);
+ (LATDbits.LATD4 = 0);
+ (LATDbits.LATD5 = 0);
+ (LATDbits.LATD6 = 1);
+ CantaPartAlta(IR);
+ (LATDbits.LATD6 = 1);
+ (LATDbits.LATD6 = 0);
+ (LATDbits.LATD6 = 0);
+ (LATDbits.LATD6 = 1);
+ CantaPartBaixa(IR);
+ (LATDbits.LATD6 = 1);
+ (LATDbits.LATD6 = 0);
+ (TRISDbits.TRISD0 = TRISDbits.TRISD1 = TRISDbits.TRISD2 = TRISDbits.TRISD3 = 1);
+}
+
+void CantaData(char Data) {
+ (TRISDbits.TRISD0 = TRISDbits.TRISD1 = TRISDbits.TRISD2 = TRISDbits.TRISD3 = 0);
+ (LATDbits.LATD4 = 1);
+ (LATDbits.LATD5 = 0);
+ (LATDbits.LATD6 = 1);
+ CantaPartAlta(Data);
+ (LATDbits.LATD6 = 1);
+ (LATDbits.LATD6 = 0);
+ (LATDbits.LATD6 = 0);
+ (LATDbits.LATD6 = 1);
+ CantaPartBaixa(Data);
+ (LATDbits.LATD6 = 1);
+ (LATDbits.LATD6 = 0);
+ (TRISDbits.TRISD0 = TRISDbits.TRISD1 = TRISDbits.TRISD2 = TRISDbits.TRISD3 = 1);
+}
+
+void WaitForBusy(void) { char Busy;
+ (TRISDbits.TRISD0 = TRISDbits.TRISD1 = TRISDbits.TRISD2 = TRISDbits.TRISD3 = 1);
+ (LATDbits.LATD4 = 0);
+ (LATDbits.LATD5 = 1);
+ TiResetTics(Timer);
+ do {
+  (LATDbits.LATD6 = 1);(LATDbits.LATD6 = 1);
+  Busy = (PORTDbits.RD3);
+  (LATDbits.LATD6 = 0);
+  (LATDbits.LATD6 = 0);
+  (LATDbits.LATD6 = 1);(LATDbits.LATD6 = 1);
+
+  (LATDbits.LATD6 = 0);
+  (LATDbits.LATD6 = 0);
+  if (TiGetTics(Timer)) break;
+ } while(Busy);
+}
+
+void EscriuPrimeraOrdre(char ordre) {
+
+ (TRISDbits.TRISD0 = TRISDbits.TRISD1 = TRISDbits.TRISD2 = TRISDbits.TRISD3 = 0); (LATDbits.LATD4 = 0); (LATDbits.LATD5 = 0);
+ (LATDbits.LATD6 = 1); (LATDbits.LATD6 = 1);
+  (LATDbits.LATD3 = (ordre & 0x08 ? 1 : 0));
+  (LATDbits.LATD2 = (ordre & 0x04 ? 1 : 0));
+  (LATDbits.LATD1 = (ordre & 0x02 ? 1 : 0));
+  (LATDbits.LATD0 = (ordre & 0x01 ? 1 : 0));
+ (LATDbits.LATD6 = 0);
+}
+
+static char state = 0;
+void motorLCD(void) {
+
+
+ switch(state) {
+  case 0:
+   if (marquesina == 0) {
+    posFila = 0;
+
+    state = 1;
+   }
+            if (marquesina == 1) {
+                if(cadenaActual == 0) {
+                    posFila = posInicio;
+                } else {
+                    posFila = 0;
+                }
+                state = 1;
+            }
+            if (marquesina == -1) {
+                if(cadenaActual == 2) {
+                    posFila = posInicio;
+                } else {
+                    posFila = 0;
+                }
+                state = 1;
+            }
+            if(marquesina == 2){
+                if(cadenaActual == 0 || cadenaActual == 2) {
+                    posFila = posInicio;
+                } else {
+                    posFila = 0;
+                }
+                state = 4;
+            }
+  break;
+  case 1:
+    if (++countImp <= 16 && cadenaEscritura[cadenaActual][posFila] != '\0') {
+                LcPutChar(cadenaEscritura[cadenaActual][posFila]);
+                posFila++;
+   }
+   else if (cadenaEscritura[cadenaActual][posFila] == '\0' && marquesina != 2) {
+    cadenaActual++;
+    state = 2;
+   }
+   else if (countImp > 16 && marquesina != 2) {
+
+                if(cadenaActual < 2) {
+
+                    marquesina = 1;
+                } else {
+                    marquesina = -1;
+                }
+                cadenaActual++;
+                state = 2;
+   }
+            else if(cadenaEscritura[cadenaActual][posFila] == '\0' && marquesina == 2) {
+                cadenaActual++;
+                state = 11;
+            }
+
+  break;
+  case 2:
+   if (cadenaActual < 4) {
+                countImp = 0;
+    if(cadenaActual == 2)LcGotoXY(0,1);
+                state = 0;
+   }
+            else if (cadenaActual == 4 && ((!StopLCD || cadenaEscritura[3][posFila] != '\0'))){
+
+                countImp = 0;
+                TiResetTics(tLCD);
+                cadenaActual = 0;
+                state = 3;
+            } else if (cadenaActual == 4 && cadenaEscritura[3][posFila] == '\0'){
+                finLCD = 1;
+            }
+
+
+  break;
+  case 3:
+            if(TiGetTics(tLCD) >= 1000 && marquesina == 1){
+                posInicio++;
+                if(cadenaEscritura[0][posInicio] == '\0'){
+                    posInicio = 0;
+                }
+                LcGotoXY(0,0);
+                countImp = 0;
+                state = 0;
+            }
+
+            if(TiGetTics(tLCD) >= 1000 && marquesina == -1){
+                posInicio++;
+                if(cadenaEscritura[2][posInicio] == '\0'){
+                    posInicio = 0;
+                }
+                LcGotoXY(0,0);
+                countImp = 0;
+                state = 0;
+            }
+            if(TiGetTics(tLCD) >= 40 && marquesina == 0) {
+                posInicio = 0;
+                LcGotoXY(0,0);
+                state = 0;
+            }
+
+            if(marquesina == 2){
+
+                if(TiGetTics(tLCD) >= 1000 && posInicio != 0 || TiGetTics(tLCD) >= 5000 && posInicio == 0 ){
+                    posInicio++;
+                    if(posInicio == 18){
+                        StopUsers = 1;
+                    }
+                    if(cadenaEscritura[0][posInicio] == '\0'){
+                        finCadena0 = 1;
+
+                    }
+                    if(cadenaEscritura[2][posInicio] == '\0'){
+                        finCadena2 = 1;
+
+                    }
+                    countImp = 0;
+                    LcGotoXY(0,0);
+                    state = 0;
+                }
+            }
+            finLCD = 0;
+  break;
+        case 4:
+            if(finCadena0 && cadenaActual == 0 || finCadena2 && cadenaActual == 2 || finCadena2 && cadenaActual == 2 && finCadena0 && cadenaActual == 0) {
+                cadenaActual++;
+                state = 11;
+            } else {
+                state = 1;
+            }
+        break;
+
+
+        case 11:
+            if(countImp <= 16 && posFila <= 16){
+                LcPutChar(' ');
+                countImp++;
+                posFila++;
+            }
+            if(countImp > 16 || posFila > 16){
+                state = 2;
+            }
+        break;
+
+ }
+}
+
+void LcPutMyString(unsigned char *primeraCadena,unsigned char *segundaCadena, unsigned char *terceraCadena, unsigned char *cuartaCadena){
+    cadenaEscritura[0] = primeraCadena;
+    cadenaEscritura[1] = segundaCadena;
+    cadenaEscritura[2] = terceraCadena;
+    cadenaEscritura[3] = cuartaCadena;
+    cadenaActual = 0;
+    posInicio = 0;
+    posFila = 0;
+    marquesina = 0;
+    StopLCD = 0;
+    finCadena0 = 0;
+    finCadena2 = 0;
+    countImp = 0;
+    StopUsers = 0;
+    finLCD = 0;
+}
+
+void stopWriting(){
+    StopLCD = 1;
+}
+
+__bit LcActMarquesina(){
+    return StopUsers;
+}
+
+void startMarquesina(signed char estadoMarquesina) {
+    marquesina = estadoMarquesina;
+    state = 0;
+}
+
+void LcPutCharSMS(char c){
+    WaitForBusy(); CantaData(c);
+    LcGotoXY(ColumnaAct, FilaAct);
 }

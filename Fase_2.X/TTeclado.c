@@ -4,9 +4,9 @@
 
 void InitTeclado(){
     teclado = TiGetTimer();
-    tiempoTecla = TiGetTimer();
-    keyPressed = 0;
-    pushed = -1;
+    tTecla = TiGetTimer();
+    teclaPresionada = 0;
+    presionada = -1;
   
 }
 
@@ -14,62 +14,62 @@ void InitTeclado(){
 void motorTeclado(void) {
 	static char state = 0;
     
-    if(TiGetTics(tiempoTecla) >= ONE_SEC && pushed != -1){
-        pushed = -1;
-        //newSMSMenu(*keyActual);
+    if(TiGetTics(tTecla) >= UN_SEG && presionada != -1){
+        presionada = -1;
+        //newSMSMenu(*teclaActual);
       
     }
 	switch(state) {
 		case 0:
-			if ((PORTB & 0x07)  == NO_PRESIONADO) {
+			if ((PORTB & 0x07)  == NOT_PRESSED) {
 				filas++;
-                Fila0 = 1;
-				Fila1 = 0;
+                F0 = 1;
+				F1 = 0;
 				
                 state = 1;
 			}
-			else if ((PORTB & 0x07) != NO_PRESIONADO) {
+			else if ((PORTB & 0x07) != NOT_PRESSED) {
 				TiResetTics(teclado);
 				state = 4;
 			}
 		break;
 		case 1:
-			if ((PORTB & 0x07)  == NO_PRESIONADO) {
+			if ((PORTB & 0x07)  == NOT_PRESSED) {
 				filas++;
                 
-				Fila1 = 1;
-				Fila2 = 0;
+				F1 = 1;
+				F2 = 0;
                 
 				state = 2;
 			}
-			else if ((PORTB & 0x07) != NO_PRESIONADO) {
+			else if ((PORTB & 0x07) != NOT_PRESSED) {
 				TiResetTics(teclado);
 				state = 4;
 			}
 		break;
 		case 2:
-			if ((PORTB & 0x07) == NO_PRESIONADO) {
+			if ((PORTB & 0x07) == NOT_PRESSED) {
 				
                 filas++;
                 
-				Fila2 = 1;
-                Fila3 = 0;
+				F2 = 1;
+                F3 = 0;
 				state = 3;
 			}
-			else if ((PORTB & 0x07) != NO_PRESIONADO) {
+			else if ((PORTB & 0x07) != NOT_PRESSED) {
 				TiResetTics(teclado);
 				state = 4;
 			}
 		break;
 		case 3:
-			if ((PORTB & 0x07) == NO_PRESIONADO) {
+			if ((PORTB & 0x07) == NOT_PRESSED) {
 				filas = 0;
-                Fila0 = 0;
-                Fila3 = 1;
+                F0 = 0;
+                F3 = 1;
                 
 				state = 0;
 			}
-			else if ( (PORTB & 0x07) != NO_PRESIONADO) {
+			else if ( (PORTB & 0x07) != NOT_PRESSED) {
 				TiResetTics(teclado);
 				state = 4;
 			}
@@ -81,78 +81,78 @@ void motorTeclado(void) {
             }
 		break;
 		case 5:
-			if ((PORTB & 0x07) != NO_PRESIONADO) {
+			if ((PORTB & 0x07) != NOT_PRESSED) {
 				if(filas != 3){
-                    if(keyActual == ProcesaTecla(filas,(PORTB & 0x07),pushed)){
-                        TiResetTics(tiempoTecla);
-                        pushed++;
-                        keyActual++;
-                        if(*keyActual == '-') {
-                            pushed = 0;
-                            keyActual = keyActual - 4;
-                        } else if(pushed == 5){
-                            pushed = 0;
-                            keyActual-=5;
+                    if(teclaActual == ProcesaTecla(filas,(PORTB & 0x07),presionada)){
+                        TiResetTics(tTecla);
+                        presionada++;
+                        teclaActual++;
+                        if(*teclaActual == '-') {
+                            presionada = 0;
+                            teclaActual = teclaActual - 4;
+                        } else if(presionada == 5){
+                            presionada = 0;
+                            teclaActual-=5;
                         }
                         
-                        //smsActualizado(*keyActual);
+                        //smsActualizado(*teclaActual);
                     } else {
-                        if(pushed != -1) {
-                            //newSMSMenu(*keyActual);
+                        if(presionada != -1) {
+                            //newSMSMenu(*teclaActual);
                         }
-                        pushed = 0;
-                        keyActual = ProcesaTecla(filas,(PORTB & 0x07),pushed);
-                        //smsActualizado(*keyActual);
-                        TiResetTics(tiempoTecla);
+                        presionada = 0;
+                        teclaActual = ProcesaTecla(filas,(PORTB & 0x07),presionada);
+                        //smsActualizado(*teclaActual);
+                        TiResetTics(tTecla);
                     }
                     
                 } else{
                     
                     if((PORTB & 0x07) == 3){
                         //newCharMenu('#');
-                        if(pushed != -1){
-                                //newSMSMenu(*keyActual);                             
+                        if(presionada != -1){
+                                //newSMSMenu(*teclaActual);                             
                         }
                         
                     } else if((PORTB & 0x07) == 6){
                         //newCharMenu('*');
-                        if(pushed != -1){
-                                //newSMSMenu(*keyActual);                             
+                        if(presionada != -1){
+                                //newSMSMenu(*teclaActual);                             
                         }
                     } else if((PORTB & 0x07) == 5) {
                         
-                        if(*keyActual == zeros[pushed]){
-                            pushed++;
-                            pushed = pushed & 0x01;
+                        if(*teclaActual == zeros[presionada]){
+                            presionada++;
+                            presionada = presionada & 0x01;
                             //newCharMenu('0');
-                            keyActual = &zeros[pushed];
-                            //smsActualizado(*keyActual);
+                            teclaActual = &zeros[presionada];
+                            //smsActualizado(*teclaActual);
                         } else {        
-                            if(pushed != -1){
-                                //newSMSMenu(*keyActual);                             
+                            if(presionada != -1){
+                                //newSMSMenu(*teclaActual);                             
                             }
-                            pushed = 0;
+                            presionada = 0;
                             //newCharMenu('0');
-                            keyActual = &zeros[pushed];
-                            //smsActualizado(*keyActual);
+                            teclaActual = &zeros[presionada];
+                            //smsActualizado(*teclaActual);
                         }
                     }
                      
-                    TiResetTics(tiempoTecla);
+                    TiResetTics(tTecla);
                 }
                 state = 6;
 			}
-			else if ((PORTB & 0x07) == NO_PRESIONADO) {
-				Fila0 = 0;
-				Fila1 = 1;
-				Fila2 = 1;
-				Fila3 = 1;
+			else if ((PORTB & 0x07) == NOT_PRESSED) {
+				F0 = 0;
+				F1 = 1;
+				F2 = 1;
+				F3 = 1;
 				state = 0;
                 
 			}
 		break;
 		case 6:
-			if ((PORTB & 0x07) == NO_PRESIONADO) {
+			if ((PORTB & 0x07) == NOT_PRESSED) {
 				TiResetTics(teclado);
 				state = 7;
 			}
@@ -167,29 +167,29 @@ void motorTeclado(void) {
 		
 		break;
 		case 8:
-			if ((PORTB & 0x07) != NO_PRESIONADO) {
+			if ((PORTB & 0x07) != NOT_PRESSED) {
 				state = 6;
 			}
-			else if ((PORTB & 0x07) == NO_PRESIONADO) {
+			else if ((PORTB & 0x07) == NOT_PRESSED) {
              
-                Fila0 = 0;
-				Fila1 = 1;
-				Fila2 = 1;
-				Fila3 = 1;
+                F0 = 0;
+				F1 = 1;
+				F2 = 1;
+				F3 = 1;
 				state = 0;
 			}
 		break;
 	}
 }
 
-unsigned char* ProcesaTecla(unsigned char filas,unsigned  char columnas,signed char pushed){
+unsigned char* ProcesaTecla(unsigned char filas,unsigned  char columnas,signed char presionada){
     unsigned char *keyPointer;
     unsigned char columnActual = columnas;
      if(columnas == 3) columnActual++;
-    keyPressed = (6-columnActual)+3*filas;
-    keyPointer = &teclas[keyPressed][pushed];
-    keyPressed = keyPressed +1 + '0';
-    //newCharMenu(keyPressed);
+    teclaPresionada = (6-columnActual)+3*filas;
+    keyPointer = &teclas[teclaPresionada][presionada];
+    teclaPresionada = teclaPresionada +1 + '0';
+    //newCharMenu(teclaPresionada);
     return keyPointer;
 }
 

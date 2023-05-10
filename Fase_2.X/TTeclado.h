@@ -5,14 +5,14 @@
 #include <xc.h>
 
 #define Columnas (PORTB & 0x07) 
-#define Fila0 LATCbits.LATC0
-#define Fila1 LATCbits.LATC1
-#define Fila2 LATCbits.LATC2
-#define Fila3 LATCbits.LATC3
-#define NO_PRESIONADO 0x07
+#define F0 LATCbits.LATC0
+#define F1 LATCbits.LATC1
+#define F2 LATCbits.LATC2
+#define F3 LATCbits.LATC3
+#define NOT_PRESSED 0x07
 
 #define TREBOTES 0x20
-#define ONE_SEC 2400
+#define UN_SEG 2400
 
 
 
@@ -27,12 +27,12 @@
                                     "WXYZ9"};
 
 const unsigned char zeros[2] = "0 ";
-static unsigned char keyPressed;
+static unsigned char teclaPresionada;
 static unsigned char teclado;
-static unsigned int  tiempoTecla;
+static unsigned int  tTecla;
 static unsigned char filas;
-static unsigned char *keyActual;
-static signed char pushed;
+static unsigned char *teclaActual;
+static signed char presionada;
 
 void motorTeclado(void);
 unsigned char* ProcesaTecla(unsigned char filas,unsigned char columnas, signed char pushed);

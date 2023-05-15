@@ -9,7 +9,7 @@
 #include <xc.h>
 #include "TITIMER.h"
 
-void __interrupt(high_priority) RSI_High(void);
+void __interrupt() RSI_High(void);
 void main(void);
 void InitSistema(void);
 void InitTeclado(void);
@@ -30,7 +30,7 @@ int tick_count;
 //Important: NO es poden cridar les funcions d'interrupcions des del codi
 //ja que les seves funcions de retorn en asm són diferents.
 //Definició d'una interrupció d'alta prioritat. 
-void __interrupt(high_priority) RSI_High(void){
+void __interrupt() RSI_High(void){
     if(INTCONbits.TMR0IF == 1) RSI_Timer0();
      
 }
@@ -52,6 +52,8 @@ void main(void) {
         //motorSpeaker();
         //motorEEPROM();
         //motorTiempo();
+        
+        
         
 	}			
     return;

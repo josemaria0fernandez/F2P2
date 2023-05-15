@@ -32,7 +32,7 @@ void motorTeclado(void) {
 				TiResetTics(teclado);
 				state = 4;
 			}
-		break;
+            break;
 		case 1:
 			if ((PORTB & 0x07)  == NOT_PRESSED) {
 				filas++;
@@ -46,7 +46,7 @@ void motorTeclado(void) {
 				TiResetTics(teclado);
 				state = 4;
 			}
-		break;
+            break;
 		case 2:
 			if ((PORTB & 0x07) == NOT_PRESSED) {
 				
@@ -60,7 +60,7 @@ void motorTeclado(void) {
 				TiResetTics(teclado);
 				state = 4;
 			}
-		break;
+            break;
 		case 3:
 			if ((PORTB & 0x07) == NOT_PRESSED) {
 				filas = 0;
@@ -73,13 +73,13 @@ void motorTeclado(void) {
 				TiResetTics(teclado);
 				state = 4;
 			}
-		break;
+            break;
 		case 4:
             if (TiGetTics(teclado) >= TREBOTES){
                 
                 state = 5;
             }
-		break;
+            break;
 		case 5:
 			if ((PORTB & 0x07) != NOT_PRESSED) {
 				if(filas != 3){
@@ -150,13 +150,13 @@ void motorTeclado(void) {
 				state = 0;
                 
 			}
-		break;
+            break;
 		case 6:
 			if ((PORTB & 0x07) == NOT_PRESSED) {
 				TiResetTics(teclado);
 				state = 7;
 			}
-		break;
+            break;
 		case 7:
             
             
@@ -165,7 +165,7 @@ void motorTeclado(void) {
                 state = 8;
             }
 		
-		break;
+            break;
 		case 8:
 			if ((PORTB & 0x07) != NOT_PRESSED) {
 				state = 6;
@@ -178,17 +178,17 @@ void motorTeclado(void) {
 				F3 = 1;
 				state = 0;
 			}
-		break;
+            break;
 	}
 }
 
-unsigned char* ProcesaTecla(unsigned char filas,unsigned  char columnas,signed char presionada){
+unsigned char* ProcesaTecla(unsigned char filas,unsigned char columnas,signed char presionada){
     unsigned char *keyPointer;
     unsigned char columnActual = columnas;
-     if(columnas == 3) columnActual++;
+    if(columnas == 3) columnActual++;
     teclaPresionada = (6-columnActual)+3*filas;
     keyPointer = &teclas[teclaPresionada][presionada];
-    teclaPresionada = teclaPresionada +1 + '0';
+    teclaPresionada = teclaPresionada + 1 + '0';
     //newCharMenu(teclaPresionada);
     return keyPointer;
 }

@@ -1,48 +1,34 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"28 TITIMER.c
-[; ;TITIMER.c: 28: struct Timer {
-[s S275 `ui 1 `uc 1 ]
-[n S275 Timer h_TicsInicials b_busy ]
-"6707 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6707:     struct {
-[s S269 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S269 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"6717
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6717:     struct {
-[s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S270 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"6727
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6727:     struct {
-[s S271 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S271 . . GIEL GIEH ]
-"6706
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6706: typedef union {
-[u S268 `S269 1 `S270 1 `S271 1 ]
-[n S268 . . . . ]
-"6733
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6733: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS268 ~T0 @X0 0 e@4082 ]
-"6274
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6274: extern volatile unsigned char TMR0H __attribute__((address(0xFD7)));
-[v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
-"6267
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6267: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
-[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
-"6189
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6189:     struct {
-[s S256 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S256 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
-"6197
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6197:     struct {
-[s S257 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S257 . T0PS0 T0PS1 T0PS2 . T016BIT ]
-"6188
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6188: typedef union {
-[u S255 `S256 1 `S257 1 ]
-[n S255 . . . ]
-"6205
-[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 6205: extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
-[v _T0CONbits `VS255 ~T0 @X0 0 e@4053 ]
+"32 ./TITIMER.h
+[; ;./TITIMER.h: 32: char TiGetTimer (void);
+[v _TiGetTimer `(uc ~T0 @X0 0 ef ]
+"46
+[; ;./TITIMER.h: 46: unsigned int TiGetTics (unsigned char Handle);
+[v _TiGetTics `(ui ~T0 @X0 0 ef1`uc ]
+"284 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 284: extern volatile unsigned char PORTB __attribute__((address(0xF81)));
+[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
+"1218
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 1218:     struct {
+[s S49 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"1228
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 1228:     struct {
+[s S50 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S50 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"1217
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 1217: typedef union {
+[u S48 `S49 1 `S50 1 ]
+[n S48 . . . ]
+"1239
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 1239: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
+[v _LATCbits `VS48 ~T0 @X0 0 e@3979 ]
+"39 ./TITIMER.h
+[; ;./TITIMER.h: 39: void TiResetTics (unsigned char Handle);
+[v _TiResetTics `(v ~T0 @X0 0 ef1`uc ]
+"38 ./TTeclado.h
+[; ;./TTeclado.h: 38: unsigned char* ProcesaTecla(unsigned char filas,unsigned char columnas, signed char pushed);
+[v _ProcesaTecla `(*uc ~T0 @X0 0 ef3`uc`uc`c ]
 "54 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h
 [; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -457,226 +443,676 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7010
 [; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h: 7010: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"31 TITIMER.c
-[; ;TITIMER.c: 31: } s_Timers[20];
-[v _s_Timers `S275 ~T0 @X0 -> 20 `i e ]
-"33
-[; ;TITIMER.c: 33: static unsigned int h_Tics=0;
-[v _h_Tics `ui ~T0 @X0 1 s ]
-[i _h_Tics
--> -> 0 `i `ui
+[v F2578 `uc ~T0 @X0 -> 5 `i t ]
+"19 ./TTeclado.h
+[; ;./TTeclado.h: 19:  unsigned char teclas[9][5] = {"1111-",
+[v _teclas `F2578 ~T0 @X0 -> 9 `i e ]
+[i _teclas
+:U ..
+:U ..
+-> 49 `c
+-> 49 `c
+-> 49 `c
+-> 49 `c
+-> 45 `c
+..
+:U ..
+-> 65 `c
+-> 66 `c
+-> 67 `c
+-> 50 `c
+-> 45 `c
+..
+:U ..
+-> 68 `c
+-> 69 `c
+-> 70 `c
+-> 51 `c
+-> 45 `c
+..
+:U ..
+-> 71 `c
+-> 72 `c
+-> 73 `c
+-> 52 `c
+-> 45 `c
+..
+:U ..
+-> 74 `c
+-> 75 `c
+-> 76 `c
+-> 53 `c
+-> 45 `c
+..
+:U ..
+-> 77 `c
+-> 78 `c
+-> 79 `c
+-> 54 `c
+-> 45 `c
+..
+:U ..
+-> 80 `c
+-> 81 `c
+-> 82 `c
+-> 83 `c
+-> 55 `c
+..
+:U ..
+-> 84 `c
+-> 85 `c
+-> 86 `c
+-> 56 `c
+-> 45 `c
+..
+:U ..
+-> 87 `c
+-> 88 `c
+-> 89 `c
+-> 90 `c
+-> 57 `c
+..
+..
 ]
+"29
+[; ;./TTeclado.h: 29: const unsigned char zeros[2] = "0 ";
+[v _zeros `Cuc ~T0 @X0 -> 2 `i e ]
+[i _zeros
+:U ..
+-> 48 `c
+-> 32 `c
+..
+]
+"30
+[; ;./TTeclado.h: 30: static unsigned char teclaPresionada;
+[v _teclaPresionada `uc ~T0 @X0 1 s ]
+"31
+[; ;./TTeclado.h: 31: static unsigned char teclado;
+[v _teclado `uc ~T0 @X0 1 s ]
+"32
+[; ;./TTeclado.h: 32: static unsigned int tTecla;
+[v _tTecla `ui ~T0 @X0 1 s ]
+"33
+[; ;./TTeclado.h: 33: static unsigned char filas;
+[v _filas `uc ~T0 @X0 1 s ]
 "34
-[; ;TITIMER.c: 34: static int counter;
-[v _counter `i ~T0 @X0 1 s ]
-"44
-[; ;TITIMER.c: 44: void RSI_Timer0 (void) {
-[v _RSI_Timer0 `(v ~T0 @X0 1 ef ]
+[; ;./TTeclado.h: 34: static unsigned char *teclaActual;
+[v _teclaActual `*uc ~T0 @X0 1 s ]
+"35
+[; ;./TTeclado.h: 35: static signed char presionada;
+[v _presionada `c ~T0 @X0 1 s ]
+"5 TTeclado.c
+[; ;TTeclado.c: 5: void InitTeclado(){
+[v _InitTeclado `(v ~T0 @X0 1 ef ]
 {
-[e :U _RSI_Timer0 ]
+[e :U _InitTeclado ]
 [f ]
-"47
-[; ;TITIMER.c: 47:     INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"48
-[; ;TITIMER.c: 48:     TMR0H = 0xEF;
-[e = _TMR0H -> -> 239 `i `uc ]
-"49
-[; ;TITIMER.c: 49:     TMR0L = 0xBB;
-[e = _TMR0L -> -> 187 `i `uc ]
-"50
-[; ;TITIMER.c: 50:  h_Tics++;
-[e ++ _h_Tics -> -> 1 `i `ui ]
-"52
-[; ;TITIMER.c: 52:  if (h_Tics>=30000) {
-[e $ ! >= _h_Tics -> -> 30000 `i `ui 277  ]
-{
-"54
-[; ;TITIMER.c: 54:   for (counter=0;counter<20;counter++)
-{
-[e = _counter -> 0 `i ]
-[e $ < _counter -> 20 `i 278  ]
-[e $U 279  ]
-[e :U 278 ]
-"55
-[; ;TITIMER.c: 55:    if (s_Timers[counter].b_busy==1)
-[e $ ! == -> . *U + &U _s_Timers * -> -> _counter `ui `ux -> -> # *U &U _s_Timers `ui `ux 1 `i -> 1 `i 281  ]
-"56
-[; ;TITIMER.c: 56:     s_Timers[counter].h_TicsInicials -= h_Tics;
-[e =- . *U + &U _s_Timers * -> -> _counter `ui `ux -> -> # *U &U _s_Timers `ui `ux 0 _h_Tics ]
-[e :U 281 ]
-[e ++ _counter -> 1 `i ]
-[e $ < _counter -> 20 `i 278  ]
-[e :U 279 ]
+"6
+[; ;TTeclado.c: 6:     teclado = TiGetTimer();
+[e = _teclado -> ( _TiGetTimer ..  `uc ]
+"7
+[; ;TTeclado.c: 7:     tTecla = TiGetTimer();
+[e = _tTecla -> ( _TiGetTimer ..  `ui ]
+"8
+[; ;TTeclado.c: 8:     teclaPresionada = 0;
+[e = _teclaPresionada -> -> 0 `i `uc ]
+"9
+[; ;TTeclado.c: 9:     presionada = -1;
+[e = _presionada -> -U -> 1 `i `c ]
+"11
+[; ;TTeclado.c: 11: }
+[e :UE 280 ]
 }
-"57
-[; ;TITIMER.c: 57:   h_Tics=0;
-[e = _h_Tics -> -> 0 `i `ui ]
-"58
-[; ;TITIMER.c: 58:  }
-}
-[e :U 277 ]
-"60
-[; ;TITIMER.c: 60: }
-[e :UE 276 ]
-}
-"69
-[; ;TITIMER.c: 69: void TiInit () {
-[v _TiInit `(v ~T0 @X0 1 ef ]
+"14
+[; ;TTeclado.c: 14: void motorTeclado(void) {
+[v _motorTeclado `(v ~T0 @X0 1 ef ]
 {
-[e :U _TiInit ]
+[e :U _motorTeclado ]
 [f ]
-"70
-[; ;TITIMER.c: 70:  unsigned char counter;
-[v _counter `uc ~T0 @X0 1 a ]
-"71
-[; ;TITIMER.c: 71:  for (counter=0;counter<20;counter++) {
+"15
+[; ;TTeclado.c: 15:  static char state = 0;
+[v F2593 `uc ~T0 @X0 1 s state ]
+[i F2593
+-> -> 0 `i `uc
+]
+"17
+[; ;TTeclado.c: 17:     if(TiGetTics(tTecla) >= 2400 && presionada != -1){
+[e $ ! && >= ( _TiGetTics (1 -> _tTecla `uc -> -> 2400 `i `ui != -> _presionada `i -U -> 1 `i 282  ]
 {
-[e = _counter -> -> 0 `i `uc ]
-[e $ < -> _counter `i -> 20 `i 283  ]
+"18
+[; ;TTeclado.c: 18:         presionada = -1;
+[e = _presionada -> -U -> 1 `i `c ]
+"21
+[; ;TTeclado.c: 21:     }
+}
+[e :U 282 ]
+"22
+[; ;TTeclado.c: 22:  switch(state) {
 [e $U 284  ]
-[e :U 283 ]
 {
-"72
-[; ;TITIMER.c: 72:   s_Timers[counter].b_busy=0;
-[e = . *U + &U _s_Timers * -> _counter `ux -> -> # *U &U _s_Timers `ui `ux 1 -> -> 0 `i `uc ]
-"73
-[; ;TITIMER.c: 73:  }
-}
-[e ++ _counter -> -> 1 `i `uc ]
-[e $ < -> _counter `i -> 20 `i 283  ]
-[e :U 284 ]
-}
-"74
-[; ;TITIMER.c: 74:  h_Tics=0;
-[e = _h_Tics -> -> 0 `i `ui ]
-"77
-[; ;TITIMER.c: 77:  T0CONbits.T08BIT=0;
-[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
-"78
-[; ;TITIMER.c: 78:  T0CONbits.T0CS = 0;
-[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
-"79
-[; ;TITIMER.c: 79:  T0CONbits.PSA = 1;
-[e = . . _T0CONbits 0 1 -> -> 1 `i `uc ]
-"82
-[; ;TITIMER.c: 82:     TMR0H = 0xEF;
-[e = _TMR0H -> -> 239 `i `uc ]
-"83
-[; ;TITIMER.c: 83:     TMR0L = 0xBB;
-[e = _TMR0L -> -> 187 `i `uc ]
-"85
-[; ;TITIMER.c: 85:  T0CONbits.TMR0ON = 1;
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-"87
-[; ;TITIMER.c: 87:  INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"88
-[; ;TITIMER.c: 88:  INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"89
-[; ;TITIMER.c: 89: }
-[e :UE 282 ]
-}
-"91
-[; ;TITIMER.c: 91: char TiGetTimer() {
-[v _TiGetTimer `(uc ~T0 @X0 1 ef ]
+"23
+[; ;TTeclado.c: 23:   case 0:
+[e :U 285 ]
+"24
+[; ;TTeclado.c: 24:    if ((PORTB & 0x07) == 0x07) {
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 286  ]
 {
-[e :U _TiGetTimer ]
-[f ]
-"92
-[; ;TITIMER.c: 92:  unsigned char counter=0;
-[v _counter `uc ~T0 @X0 1 a ]
-[e = _counter -> -> 0 `i `uc ]
-"93
-[; ;TITIMER.c: 93:  while (s_Timers[counter].b_busy==1) {
+"25
+[; ;TTeclado.c: 25:     filas++;
+[e ++ _filas -> -> 1 `i `uc ]
+"26
+[; ;TTeclado.c: 26:                 LATCbits.LATC0 = 1;
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+"27
+[; ;TTeclado.c: 27:     LATCbits.LATC1 = 0;
+[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
+"29
+[; ;TTeclado.c: 29:                 state = 1;
+[e = F2593 -> -> 1 `i `uc ]
+"30
+[; ;TTeclado.c: 30:    }
+}
 [e $U 287  ]
+"31
+[; ;TTeclado.c: 31:    else if ((PORTB & 0x07) != 0x07) {
+[e :U 286 ]
+[e $ ! != & -> _PORTB `i -> 7 `i -> 7 `i 288  ]
+{
+"32
+[; ;TTeclado.c: 32:     TiResetTics(teclado);
+[e ( _TiResetTics (1 _teclado ]
+"33
+[; ;TTeclado.c: 33:     state = 4;
+[e = F2593 -> -> 4 `i `uc ]
+"34
+[; ;TTeclado.c: 34:    }
+}
 [e :U 288 ]
+[e :U 287 ]
+"35
+[; ;TTeclado.c: 35:   break;
+[e $U 283  ]
+"36
+[; ;TTeclado.c: 36:   case 1:
+[e :U 289 ]
+"37
+[; ;TTeclado.c: 37:    if ((PORTB & 0x07) == 0x07) {
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 290  ]
+{
+"38
+[; ;TTeclado.c: 38:     filas++;
+[e ++ _filas -> -> 1 `i `uc ]
+"40
+[; ;TTeclado.c: 40:     LATCbits.LATC1 = 1;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+"41
+[; ;TTeclado.c: 41:     LATCbits.LATC2 = 0;
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+"43
+[; ;TTeclado.c: 43:     state = 2;
+[e = F2593 -> -> 2 `i `uc ]
+"44
+[; ;TTeclado.c: 44:    }
+}
+[e $U 291  ]
+"45
+[; ;TTeclado.c: 45:    else if ((PORTB & 0x07) != 0x07) {
+[e :U 290 ]
+[e $ ! != & -> _PORTB `i -> 7 `i -> 7 `i 292  ]
+{
+"46
+[; ;TTeclado.c: 46:     TiResetTics(teclado);
+[e ( _TiResetTics (1 _teclado ]
+"47
+[; ;TTeclado.c: 47:     state = 4;
+[e = F2593 -> -> 4 `i `uc ]
+"48
+[; ;TTeclado.c: 48:    }
+}
+[e :U 292 ]
+[e :U 291 ]
+"49
+[; ;TTeclado.c: 49:   break;
+[e $U 283  ]
+"50
+[; ;TTeclado.c: 50:   case 2:
+[e :U 293 ]
+"51
+[; ;TTeclado.c: 51:    if ((PORTB & 0x07) == 0x07) {
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 294  ]
+{
+"53
+[; ;TTeclado.c: 53:                 filas++;
+[e ++ _filas -> -> 1 `i `uc ]
+"55
+[; ;TTeclado.c: 55:     LATCbits.LATC2 = 1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+"56
+[; ;TTeclado.c: 56:                 LATCbits.LATC3 = 0;
+[e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
+"57
+[; ;TTeclado.c: 57:     state = 3;
+[e = F2593 -> -> 3 `i `uc ]
+"58
+[; ;TTeclado.c: 58:    }
+}
+[e $U 295  ]
+"59
+[; ;TTeclado.c: 59:    else if ((PORTB & 0x07) != 0x07) {
+[e :U 294 ]
+[e $ ! != & -> _PORTB `i -> 7 `i -> 7 `i 296  ]
+{
+"60
+[; ;TTeclado.c: 60:     TiResetTics(teclado);
+[e ( _TiResetTics (1 _teclado ]
+"61
+[; ;TTeclado.c: 61:     state = 4;
+[e = F2593 -> -> 4 `i `uc ]
+"62
+[; ;TTeclado.c: 62:    }
+}
+[e :U 296 ]
+[e :U 295 ]
+"63
+[; ;TTeclado.c: 63:   break;
+[e $U 283  ]
+"64
+[; ;TTeclado.c: 64:   case 3:
+[e :U 297 ]
+"65
+[; ;TTeclado.c: 65:    if ((PORTB & 0x07) == 0x07) {
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 298  ]
+{
+"66
+[; ;TTeclado.c: 66:     filas = 0;
+[e = _filas -> -> 0 `i `uc ]
+"67
+[; ;TTeclado.c: 67:                 LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"68
+[; ;TTeclado.c: 68:                 LATCbits.LATC3 = 1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+"70
+[; ;TTeclado.c: 70:     state = 0;
+[e = F2593 -> -> 0 `i `uc ]
+"71
+[; ;TTeclado.c: 71:    }
+}
+[e $U 299  ]
+"72
+[; ;TTeclado.c: 72:    else if ( (PORTB & 0x07) != 0x07) {
+[e :U 298 ]
+[e $ ! != & -> _PORTB `i -> 7 `i -> 7 `i 300  ]
+{
+"73
+[; ;TTeclado.c: 73:     TiResetTics(teclado);
+[e ( _TiResetTics (1 _teclado ]
+"74
+[; ;TTeclado.c: 74:     state = 4;
+[e = F2593 -> -> 4 `i `uc ]
+"75
+[; ;TTeclado.c: 75:    }
+}
+[e :U 300 ]
+[e :U 299 ]
+"76
+[; ;TTeclado.c: 76:   break;
+[e $U 283  ]
+"77
+[; ;TTeclado.c: 77:   case 4:
+[e :U 301 ]
+"78
+[; ;TTeclado.c: 78:             if (TiGetTics(teclado) >= 0x20){
+[e $ ! >= ( _TiGetTics (1 _teclado -> -> 32 `i `ui 302  ]
+{
+"80
+[; ;TTeclado.c: 80:                 state = 5;
+[e = F2593 -> -> 5 `i `uc ]
+"81
+[; ;TTeclado.c: 81:             }
+}
+[e :U 302 ]
+"82
+[; ;TTeclado.c: 82:   break;
+[e $U 283  ]
+"83
+[; ;TTeclado.c: 83:   case 5:
+[e :U 303 ]
+"84
+[; ;TTeclado.c: 84:    if ((PORTB & 0x07) != 0x07) {
+[e $ ! != & -> _PORTB `i -> 7 `i -> 7 `i 304  ]
+{
+"85
+[; ;TTeclado.c: 85:     if(filas != 3){
+[e $ ! != -> _filas `i -> 3 `i 305  ]
+{
+"86
+[; ;TTeclado.c: 86:                     if(teclaActual == ProcesaTecla(filas,(PORTB & 0x07),presionada)){
+[e $ ! == _teclaActual ( _ProcesaTecla (3 , , _filas -> & -> _PORTB `i -> 7 `i `uc _presionada 306  ]
+{
+"87
+[; ;TTeclado.c: 87:                         TiResetTics(tTecla);
+[e ( _TiResetTics (1 -> _tTecla `uc ]
+"88
+[; ;TTeclado.c: 88:                         presionada++;
+[e ++ _presionada -> -> 1 `i `c ]
+"89
+[; ;TTeclado.c: 89:                         teclaActual++;
+[e ++ _teclaActual * -> -> 1 `i `x -> -> # *U _teclaActual `i `x ]
+"90
+[; ;TTeclado.c: 90:                         if(*teclaActual == '-') {
+[e $ ! == -> *U _teclaActual `ui -> 45 `ui 307  ]
+{
+"91
+[; ;TTeclado.c: 91:                             presionada = 0;
+[e = _presionada -> -> 0 `i `c ]
+"92
+[; ;TTeclado.c: 92:                             teclaActual = teclaActual - 4;
+[e = _teclaActual - _teclaActual * -> -> 4 `i `x -> -> # *U _teclaActual `i `x ]
+"93
+[; ;TTeclado.c: 93:                         } else if(presionada == 5){
+}
+[e $U 308  ]
+[e :U 307 ]
+[e $ ! == -> _presionada `i -> 5 `i 309  ]
 {
 "94
-[; ;TITIMER.c: 94:   counter++;
-[e ++ _counter -> -> 1 `i `uc ]
+[; ;TTeclado.c: 94:                             presionada = 0;
+[e = _presionada -> -> 0 `i `c ]
 "95
-[; ;TITIMER.c: 95:   if (counter == 20) return -1;
-[e $ ! == -> _counter `i -> 20 `i 290  ]
-[e ) -> -U -> 1 `i `uc ]
-[e $UE 286  ]
-[e :U 290 ]
+[; ;TTeclado.c: 95:                             teclaActual-=5;
+[e =- _teclaActual * -> -> 5 `i `x -> -> # *U _teclaActual `i `x ]
 "96
-[; ;TITIMER.c: 96:  }
+[; ;TTeclado.c: 96:                         }
 }
-[e :U 287 ]
-"93
-[; ;TITIMER.c: 93:  while (s_Timers[counter].b_busy==1) {
-[e $ == -> . *U + &U _s_Timers * -> _counter `ux -> -> # *U &U _s_Timers `ui `ux 1 `i -> 1 `i 288  ]
-[e :U 289 ]
-"97
-[; ;TITIMER.c: 97:  s_Timers[counter].b_busy=1;
-[e = . *U + &U _s_Timers * -> _counter `ux -> -> # *U &U _s_Timers `ui `ux 1 -> -> 1 `i `uc ]
-"98
-[; ;TITIMER.c: 98:  return (counter);
-[e ) -> _counter `uc ]
-[e $UE 286  ]
+[e :U 309 ]
+[e :U 308 ]
 "99
-[; ;TITIMER.c: 99: }
-[e :UE 286 ]
+[; ;TTeclado.c: 99:                     } else {
 }
-"101
-[; ;TITIMER.c: 101: void TiResetTics (unsigned char Handle) {
-[v _TiResetTics `(v ~T0 @X0 1 ef1`uc ]
+[e $U 310  ]
+[e :U 306 ]
 {
-[e :U _TiResetTics ]
-[v _Handle `uc ~T0 @X0 1 r1 ]
-[f ]
+"100
+[; ;TTeclado.c: 100:                         if(presionada != -1) {
+[e $ ! != -> _presionada `i -U -> 1 `i 311  ]
+{
+"102
+[; ;TTeclado.c: 102:                         }
+}
+[e :U 311 ]
 "103
-[; ;TITIMER.c: 103:  s_Timers[Handle].h_TicsInicials=h_Tics;
-[e = . *U + &U _s_Timers * -> _Handle `ux -> -> # *U &U _s_Timers `ui `ux 0 _h_Tics ]
-"105
-[; ;TITIMER.c: 105: }
-[e :UE 291 ]
+[; ;TTeclado.c: 103:                         presionada = 0;
+[e = _presionada -> -> 0 `i `c ]
+"104
+[; ;TTeclado.c: 104:                         teclaActual = ProcesaTecla(filas,(PORTB & 0x07),presionada);
+[e = _teclaActual ( _ProcesaTecla (3 , , _filas -> & -> _PORTB `i -> 7 `i `uc _presionada ]
+"106
+[; ;TTeclado.c: 106:                         TiResetTics(tTecla);
+[e ( _TiResetTics (1 -> _tTecla `uc ]
+"107
+[; ;TTeclado.c: 107:                     }
 }
-"108
-[; ;TITIMER.c: 108: unsigned int TiGetTics (unsigned char Handle) {
-[v _TiGetTics `(ui ~T0 @X0 1 ef1`uc ]
-{
-[e :U _TiGetTics ]
-[v _Handle `uc ~T0 @X0 1 r1 ]
-[f ]
+[e :U 310 ]
 "109
-[; ;TITIMER.c: 109: volatile unsigned int actual;
-[v _actual `Vui ~T0 @X0 1 a ]
-"110
-[; ;TITIMER.c: 110:  actual=h_Tics;
-[e = _actual _h_Tics ]
+[; ;TTeclado.c: 109:                 } else{
+}
+[e $U 312  ]
+[e :U 305 ]
+{
 "111
-[; ;TITIMER.c: 111:  return (actual-(s_Timers[Handle].h_TicsInicials));
-[e ) - _actual . *U + &U _s_Timers * -> _Handle `ux -> -> # *U &U _s_Timers `ui `ux 0 ]
-[e $UE 292  ]
-"112
-[; ;TITIMER.c: 112: }
-[e :UE 292 ]
-}
-"114
-[; ;TITIMER.c: 114: void TiCloseTimer (unsigned char Handle) {
-[v _TiCloseTimer `(v ~T0 @X0 1 ef1`uc ]
+[; ;TTeclado.c: 111:                     if((PORTB & 0x07) == 3){
+[e $ ! == & -> _PORTB `i -> 7 `i -> 3 `i 313  ]
 {
-[e :U _TiCloseTimer ]
-[v _Handle `uc ~T0 @X0 1 r1 ]
-[f ]
+"113
+[; ;TTeclado.c: 113:                         if(presionada != -1){
+[e $ ! != -> _presionada `i -U -> 1 `i 314  ]
+{
 "115
-[; ;TITIMER.c: 115:  s_Timers[Handle].b_busy=0;
-[e = . *U + &U _s_Timers * -> _Handle `ux -> -> # *U &U _s_Timers `ui `ux 1 -> -> 0 `i `uc ]
-"116
-[; ;TITIMER.c: 116: }
-[e :UE 293 ]
+[; ;TTeclado.c: 115:                         }
 }
-"119
-[; ;TITIMER.c: 119: void TiEnd () {
-[v _TiEnd `(v ~T0 @X0 1 ef ]
+[e :U 314 ]
+"117
+[; ;TTeclado.c: 117:                     } else if((PORTB & 0x07) == 6){
+}
+[e $U 315  ]
+[e :U 313 ]
+[e $ ! == & -> _PORTB `i -> 7 `i -> 6 `i 316  ]
 {
-[e :U _TiEnd ]
+"119
+[; ;TTeclado.c: 119:                         if(presionada != -1){
+[e $ ! != -> _presionada `i -U -> 1 `i 317  ]
+{
+"121
+[; ;TTeclado.c: 121:                         }
+}
+[e :U 317 ]
+"122
+[; ;TTeclado.c: 122:                     } else if((PORTB & 0x07) == 5) {
+}
+[e $U 318  ]
+[e :U 316 ]
+[e $ ! == & -> _PORTB `i -> 7 `i -> 5 `i 319  ]
+{
+"124
+[; ;TTeclado.c: 124:                         if(*teclaActual == zeros[presionada]){
+[e $ ! == -> *U _teclaActual `i -> *U + &U _zeros * -> -> _presionada `uc `ux -> -> # *U &U _zeros `ui `ux `i 320  ]
+{
+"125
+[; ;TTeclado.c: 125:                             presionada++;
+[e ++ _presionada -> -> 1 `i `c ]
+"126
+[; ;TTeclado.c: 126:                             presionada = presionada & 0x01;
+[e = _presionada -> & -> _presionada `i -> 1 `i `c ]
+"128
+[; ;TTeclado.c: 128:                             teclaActual = &zeros[presionada];
+[e = _teclaActual -> &U *U + &U _zeros * -> -> _presionada `uc `ux -> -> # *U &U _zeros `ui `ux `*uc ]
+"130
+[; ;TTeclado.c: 130:                         } else {
+}
+[e $U 321  ]
+[e :U 320 ]
+{
+"131
+[; ;TTeclado.c: 131:                             if(presionada != -1){
+[e $ ! != -> _presionada `i -U -> 1 `i 322  ]
+{
+"133
+[; ;TTeclado.c: 133:                             }
+}
+[e :U 322 ]
+"134
+[; ;TTeclado.c: 134:                             presionada = 0;
+[e = _presionada -> -> 0 `i `c ]
+"136
+[; ;TTeclado.c: 136:                             teclaActual = &zeros[presionada];
+[e = _teclaActual -> &U *U + &U _zeros * -> -> _presionada `uc `ux -> -> # *U &U _zeros `ui `ux `*uc ]
+"138
+[; ;TTeclado.c: 138:                         }
+}
+[e :U 321 ]
+"139
+[; ;TTeclado.c: 139:                     }
+}
+[e :U 319 ]
+[e :U 318 ]
+[e :U 315 ]
+"141
+[; ;TTeclado.c: 141:                     TiResetTics(tTecla);
+[e ( _TiResetTics (1 -> _tTecla `uc ]
+"142
+[; ;TTeclado.c: 142:                 }
+}
+[e :U 312 ]
+"143
+[; ;TTeclado.c: 143:                 state = 6;
+[e = F2593 -> -> 6 `i `uc ]
+"144
+[; ;TTeclado.c: 144:    }
+}
+[e $U 323  ]
+"145
+[; ;TTeclado.c: 145:    else if ((PORTB & 0x07) == 0x07) {
+[e :U 304 ]
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 324  ]
+{
+"146
+[; ;TTeclado.c: 146:     LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"147
+[; ;TTeclado.c: 147:     LATCbits.LATC1 = 1;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+"148
+[; ;TTeclado.c: 148:     LATCbits.LATC2 = 1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+"149
+[; ;TTeclado.c: 149:     LATCbits.LATC3 = 1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+"150
+[; ;TTeclado.c: 150:     state = 0;
+[e = F2593 -> -> 0 `i `uc ]
+"152
+[; ;TTeclado.c: 152:    }
+}
+[e :U 324 ]
+[e :U 323 ]
+"153
+[; ;TTeclado.c: 153:   break;
+[e $U 283  ]
+"154
+[; ;TTeclado.c: 154:   case 6:
+[e :U 325 ]
+"155
+[; ;TTeclado.c: 155:    if ((PORTB & 0x07) == 0x07) {
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 326  ]
+{
+"156
+[; ;TTeclado.c: 156:     TiResetTics(teclado);
+[e ( _TiResetTics (1 _teclado ]
+"157
+[; ;TTeclado.c: 157:     state = 7;
+[e = F2593 -> -> 7 `i `uc ]
+"158
+[; ;TTeclado.c: 158:    }
+}
+[e :U 326 ]
+"159
+[; ;TTeclado.c: 159:   break;
+[e $U 283  ]
+"160
+[; ;TTeclado.c: 160:   case 7:
+[e :U 327 ]
+"163
+[; ;TTeclado.c: 163:             if (TiGetTics(teclado) >= 0x20){
+[e $ ! >= ( _TiGetTics (1 _teclado -> -> 32 `i `ui 328  ]
+{
+"165
+[; ;TTeclado.c: 165:                 state = 8;
+[e = F2593 -> -> 8 `i `uc ]
+"166
+[; ;TTeclado.c: 166:             }
+}
+[e :U 328 ]
+"168
+[; ;TTeclado.c: 168:   break;
+[e $U 283  ]
+"169
+[; ;TTeclado.c: 169:   case 8:
+[e :U 329 ]
+"170
+[; ;TTeclado.c: 170:    if ((PORTB & 0x07) != 0x07) {
+[e $ ! != & -> _PORTB `i -> 7 `i -> 7 `i 330  ]
+{
+"171
+[; ;TTeclado.c: 171:     state = 6;
+[e = F2593 -> -> 6 `i `uc ]
+"172
+[; ;TTeclado.c: 172:    }
+}
+[e $U 331  ]
+"173
+[; ;TTeclado.c: 173:    else if ((PORTB & 0x07) == 0x07) {
+[e :U 330 ]
+[e $ ! == & -> _PORTB `i -> 7 `i -> 7 `i 332  ]
+{
+"175
+[; ;TTeclado.c: 175:                 LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"176
+[; ;TTeclado.c: 176:     LATCbits.LATC1 = 1;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+"177
+[; ;TTeclado.c: 177:     LATCbits.LATC2 = 1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+"178
+[; ;TTeclado.c: 178:     LATCbits.LATC3 = 1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+"179
+[; ;TTeclado.c: 179:     state = 0;
+[e = F2593 -> -> 0 `i `uc ]
+"180
+[; ;TTeclado.c: 180:    }
+}
+[e :U 332 ]
+[e :U 331 ]
+"181
+[; ;TTeclado.c: 181:   break;
+[e $U 283  ]
+"182
+[; ;TTeclado.c: 182:  }
+}
+[e $U 283  ]
+[e :U 284 ]
+[e [\ -> F2593 `i , $ -> 0 `i 285
+ , $ -> 1 `i 289
+ , $ -> 2 `i 293
+ , $ -> 3 `i 297
+ , $ -> 4 `i 301
+ , $ -> 5 `i 303
+ , $ -> 6 `i 325
+ , $ -> 7 `i 327
+ , $ -> 8 `i 329
+ 283 ]
+[e :U 283 ]
+"183
+[; ;TTeclado.c: 183: }
+[e :UE 281 ]
+}
+"185
+[; ;TTeclado.c: 185: unsigned char* ProcesaTecla(unsigned char filas,unsigned char columnas,signed char presionada){
+[v _ProcesaTecla `(*uc ~T0 @X0 1 ef3`uc`uc`c ]
+{
+[e :U _ProcesaTecla ]
+[v _filas `uc ~T0 @X0 1 r1 ]
+[v _columnas `uc ~T0 @X0 1 r2 ]
+[v _presionada `c ~T0 @X0 1 r3 ]
 [f ]
-"120
-[; ;TITIMER.c: 120: }
-[e :UE 294 ]
+"186
+[; ;TTeclado.c: 186:     unsigned char *keyPointer;
+[v _keyPointer `*uc ~T0 @X0 1 a ]
+"187
+[; ;TTeclado.c: 187:     unsigned char columnActual = columnas;
+[v _columnActual `uc ~T0 @X0 1 a ]
+[e = _columnActual _columnas ]
+"188
+[; ;TTeclado.c: 188:      if(columnas == 3) columnActual++;
+[e $ ! == -> _columnas `i -> 3 `i 334  ]
+[e ++ _columnActual -> -> 1 `i `uc ]
+[e :U 334 ]
+"189
+[; ;TTeclado.c: 189:     teclaPresionada = (6-columnActual)+3*filas;
+[e = _teclaPresionada -> + - -> 6 `i -> _columnActual `i * -> 3 `i -> _filas `i `uc ]
+"190
+[; ;TTeclado.c: 190:     keyPointer = &teclas[teclaPresionada][presionada];
+[e = _keyPointer &U *U + &U *U + &U _teclas * -> _teclaPresionada `ux -> * -> # *U &U *U &U _teclas `ui -> -> 5 `i `ui `ux * -> -> _presionada `uc `ux -> -> # *U &U *U + &U _teclas * -> _teclaPresionada `ux -> * -> # *U &U *U &U _teclas `ui -> -> 5 `i `ui `ux `ui `ux ]
+"191
+[; ;TTeclado.c: 191:     teclaPresionada = teclaPresionada +1 + '0';
+[e = _teclaPresionada -> + -> + -> _teclaPresionada `i -> 1 `i `ui -> 48 `ui `uc ]
+"193
+[; ;TTeclado.c: 193:     return keyPointer;
+[e ) _keyPointer ]
+[e $UE 333  ]
+"194
+[; ;TTeclado.c: 194: }
+[e :UE 333 ]
 }

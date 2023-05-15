@@ -3,118 +3,75 @@
 [d edition pro ]
 [d chip 18F4321 ]
 [d frameptr 4065 ]
-"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"16 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\main.c
+"16 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\main.c
 [v _initCPU initCPU `(v  1 e 1 0 ]
 "33
 [v _RSI_High RSI_High `IIH(v  1 e 1 0 ]
 "41
 [v _main main `(v  1 e 1 0 ]
-"60
-[v _InitSistema InitSistema `(v  1 e 1 0 ]
-"44 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
+"44 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
 [v _RSI_Timer0 RSI_Timer0 `(v  1 e 1 0 ]
-"94
+"91
 [v _TiGetTimer TiGetTimer `(uc  1 e 1 0 ]
-"104
+"101
 [v _TiResetTics TiResetTics `(v  1 e 1 0 ]
-"111
+"108
 [v _TiGetTics TiGetTics `(ui  1 e 2 0 ]
-"156 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\TLCD.c
-[v _LcGotoXY LcGotoXY `(v  1 e 1 0 ]
-"174
-[v _LcPutChar LcPutChar `(v  1 e 1 0 ]
-"203
-[v _Espera Espera `(v  1 e 1 0 ]
-"208
-[v _CantaPartAlta CantaPartAlta `(v  1 e 1 0 ]
-"215
-[v _CantaPartBaixa CantaPartBaixa `(v  1 e 1 0 ]
-"222
-[v _CantaIR CantaIR `(v  1 e 1 0 ]
-"238
-[v _CantaData CantaData `(v  1 e 1 0 ]
-"254
-[v _WaitForBusy WaitForBusy `(v  1 e 1 0 ]
-"272
-[v _EscriuPrimeraOrdre EscriuPrimeraOrdre `(v  1 e 1 0 ]
-"72 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X/TLCD.h
-[v _cadenaEscritura cadenaEscritura `[4]*.2uc  1 s 8 cadenaEscritura ]
-"73
-[v _marquesina marquesina `c  1 s 1 marquesina ]
-"74
-[v _countImp countImp `uc  1 s 1 countImp ]
-[v _countFlecha countFlecha `uc  1 s 1 countFlecha ]
-"75
-[v _posFila posFila `uc  1 s 1 posFila ]
-[v _posInicio posInicio `uc  1 s 1 posInicio ]
-[v _cadenaActual cadenaActual `uc  1 s 1 cadenaActual ]
-"76
-[v _tLCD tLCD `ui  1 s 2 tLCD ]
-"77
-[v _StopLCD StopLCD `b  1 s 0 StopLCD ]
-[v _finCadena0 finCadena0 `b  1 s 0 finCadena0 ]
-[v _finCadena2 finCadena2 `b  1 s 0 finCadena2 ]
-[v _StopUsers StopUsers `b  1 s 0 StopUsers ]
-"78
-[v _finLCD finLCD `b  1 e 0 0 ]
-[s S441 . 1 `uc 1 RD0 1 0 :1:0 
-`uc 1 RD1 1 0 :1:1 
-`uc 1 RD2 1 0 :1:2 
-`uc 1 RD3 1 0 :1:3 
-`uc 1 RD4 1 0 :1:4 
-`uc 1 RD5 1 0 :1:5 
-`uc 1 RD6 1 0 :1:6 
-`uc 1 RD7 1 0 :1:7 
-]
-"681 C:\Program Files\Microchip\xc8\v2.36\pic\include\proc\pic18f4321.h
-[s S548 . 1 `uc 1 PSP0 1 0 :1:0 
-`uc 1 PSP1 1 0 :1:1 
-`uc 1 PSP2 1 0 :1:2 
-`uc 1 PSP3 1 0 :1:3 
-`uc 1 PSP4 1 0 :1:4 
-`uc 1 PSP5 1 0 :1:5 
-`uc 1 PSP6 1 0 :1:6 
-`uc 1 PSP7 1 0 :1:7 
-]
-[s S557 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 P1B 1 0 :1:5 
-`uc 1 P1C 1 0 :1:6 
-`uc 1 P1D 1 0 :1:7 
-]
-[s S562 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 SS2 1 0 :1:7 
-]
-[u S565 . 1 `S441 1 . 1 0 `S548 1 . 1 0 `S557 1 . 1 0 `S562 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES565  1 e 1 @3971 ]
-"989
+"185 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\TTeclado.c
+[v _ProcesaTecla ProcesaTecla `(*.39uc  1 e 2 0 ]
+"10 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X/TADC.h
+[v _JoyPosition JoyPosition `uc  1 s 1 JoyPosition ]
+"11
+[v _direction direction `c  1 e 1 0 ]
+"12
+[v _isCentered isCentered `b  1 e 0 0 ]
+"19 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X/TTeclado.h
+[v _teclas teclas `[9][5]uc  1 e 45 0 ]
+"29
+[v _zeros zeros `C[2]uc  1 e 2 0 ]
+"30
+[v _teclaPresionada teclaPresionada `uc  1 s 1 teclaPresionada ]
+"31
+[v _teclado teclado `uc  1 s 1 teclado ]
+"32
+[v _tTecla tTecla `ui  1 s 2 tTecla ]
+"33
+[v _filas filas `uc  1 s 1 filas ]
+"34
+[v _teclaActual teclaActual `*.35uc  1 s 2 teclaActual ]
+"35
+[v _presionada presionada `c  1 s 1 presionada ]
+"284 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4321.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"988
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S261 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S257 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -123,8 +80,8 @@
 `uc 1 LATA6 1 0 :1:6 
 `uc 1 LATA7 1 0 :1:7 
 ]
-"1016
-[s S270 . 1 `uc 1 LA0 1 0 :1:0 
+"1015
+[s S266 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -133,99 +90,89 @@
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S279 . 1 `S261 1 . 1 0 `S270 1 . 1 0 ]
-[v _LATAbits LATAbits `VES279  1 e 1 @3977 ]
-[s S499 . 1 `uc 1 LATD0 1 0 :1:0 
-`uc 1 LATD1 1 0 :1:1 
-`uc 1 LATD2 1 0 :1:2 
-`uc 1 LATD3 1 0 :1:3 
-`uc 1 LATD4 1 0 :1:4 
-`uc 1 LATD5 1 0 :1:5 
-`uc 1 LATD6 1 0 :1:6 
-`uc 1 LATD7 1 0 :1:7 
+[u S275 . 1 `S257 1 . 1 0 `S266 1 . 1 0 ]
+[v _LATAbits LATAbits `VES275  1 e 1 @3977 ]
+[s S484 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
 ]
-"1352
-[s S508 . 1 `uc 1 LD0 1 0 :1:0 
-`uc 1 LD1 1 0 :1:1 
-`uc 1 LD2 1 0 :1:2 
-`uc 1 LD3 1 0 :1:3 
-`uc 1 LD4 1 0 :1:4 
-`uc 1 LD5 1 0 :1:5 
-`uc 1 LD6 1 0 :1:6 
-`uc 1 LD7 1 0 :1:7 
+"1239
+[s S493 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
 ]
-[u S517 . 1 `S499 1 . 1 0 `S508 1 . 1 0 ]
-[v _LATDbits LATDbits `VES517  1 e 1 @3980 ]
-"1489
+[u S502 . 1 `S484 1 . 1 0 `S493 1 . 1 0 ]
+[v _LATCbits LATCbits `VES502  1 e 1 @3979 ]
+"1488
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-"1711
+"1710
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-"1933
+"1932
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S432 . 1 `uc 1 TRISD0 1 0 :1:0 
-`uc 1 TRISD1 1 0 :1:1 
-`uc 1 TRISD2 1 0 :1:2 
-`uc 1 TRISD3 1 0 :1:3 
-`uc 1 TRISD4 1 0 :1:4 
-`uc 1 TRISD5 1 0 :1:5 
-`uc 1 TRISD6 1 0 :1:6 
-`uc 1 TRISD7 1 0 :1:7 
-]
-"2187
-[u S450 . 1 `S432 1 . 1 0 `S441 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES450  1 e 1 @3989 ]
-"4646
+"4645
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
-"4717
+"4716
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S82 . 1 `uc 1 . 1 0 :1:0 
+[s S78 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
-"4846
-[s S85 . 1 `uc 1 ADON 1 0 :1:0 
+"4845
+[s S81 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S89 . 1 `uc 1 . 1 0 :1:0 
+[s S85 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S96 . 1 `uc 1 . 1 0 :1:0 
+[s S92 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S99 . 1 `uc 1 . 1 0 :1:0 
+[s S95 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S102 . 1 `uc 1 . 1 0 :1:0 
+[s S98 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S105 . 1 `uc 1 . 1 0 :1:0 
+[s S101 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S108 . 1 `uc 1 . 1 0 :1:0 
+[s S104 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S111 . 1 `S82 1 . 1 0 `S85 1 . 1 0 `S89 1 . 1 0 `S96 1 . 1 0 `S99 1 . 1 0 `S102 1 . 1 0 `S105 1 . 1 0 `S108 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES111  1 e 1 @4034 ]
-[s S155 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[u S107 . 1 `S78 1 . 1 0 `S81 1 . 1 0 `S85 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 `S104 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES107  1 e 1 @4034 ]
+"4934
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S151 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
-"5725
-[s S157 . 1 `uc 1 . 1 0 :1:0 
+"5724
+[s S153 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S160 . 1 `uc 1 . 1 0 :2:0 
+[s S156 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S163 . 1 `uc 1 . 1 0 :3:0 
+[s S159 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S166 . 1 `uc 1 . 1 0 :4:0 
+[s S162 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S169 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S165 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -233,7 +180,7 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S177 . 1 `uc 1 BOR 1 0 :1:0 
+[s S173 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -241,35 +188,35 @@
 `uc 1 . 1 0 :1:5 
 `uc 1 SBOREN 1 0 :1:6 
 ]
-[u S185 . 1 `S155 1 . 1 0 `S157 1 . 1 0 `S160 1 . 1 0 `S163 1 . 1 0 `S166 1 . 1 0 `S169 1 . 1 0 `S177 1 . 1 0 ]
-[v _RCONbits RCONbits `VES185  1 e 1 @4048 ]
-[s S377 . 1 `uc 1 T0PS 1 0 :3:0 
+[u S181 . 1 `S151 1 . 1 0 `S153 1 . 1 0 `S156 1 . 1 0 `S159 1 . 1 0 `S162 1 . 1 0 `S165 1 . 1 0 `S173 1 . 1 0 ]
+[v _RCONbits RCONbits `VES181  1 e 1 @4048 ]
+[s S373 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 `uc 1 T08BIT 1 0 :1:6 
 `uc 1 TMR0ON 1 0 :1:7 
 ]
-"6206
-[s S384 . 1 `uc 1 T0PS0 1 0 :1:0 
+"6205
+[s S380 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 T016BIT 1 0 :1:6 
 ]
-[u S390 . 1 `S377 1 . 1 0 `S384 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES390  1 e 1 @4053 ]
-"6268
+[u S386 . 1 `S373 1 . 1 0 `S380 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES386  1 e 1 @4053 ]
+"6267
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
-"6275
+"6274
 [v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
-"6540
+"6539
 [v _INTCON3 INTCON3 `VEuc  1 e 1 @4080 ]
-[s S224 . 1 `uc 1 . 1 0 :7:0 
+[s S220 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
-"6657
-[s S227 . 1 `uc 1 RBIP 1 0 :1:0 
+"6656
+[s S223 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -278,12 +225,12 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S236 . 1 `uc 1 . 1 0 :7:0 
+[s S232 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S239 . 1 `S224 1 . 1 0 `S227 1 . 1 0 `S236 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES239  1 e 1 @4081 ]
-"6702
+[u S235 . 1 `S220 1 . 1 0 `S223 1 . 1 0 `S232 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES235  1 e 1 @4081 ]
+"6701
 [v _INTCON INTCON `VEuc  1 e 1 @4082 ]
 [s S24 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
@@ -294,7 +241,7 @@
 `uc 1 PEIE_GIEL 1 0 :1:6 
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
-"6734
+"6733
 [s S33 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -310,24 +257,14 @@
 ]
 [u S46 . 1 `S24 1 . 1 0 `S33 1 . 1 0 `S42 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES46  1 e 1 @4082 ]
-[s S345 Timer 3 `ui 1 h_TicsInicials 2 0 `uc 1 b_busy 1 2 ]
-"31 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
-[v _s_Timers s_Timers `[20]S345  1 e 60 0 ]
+[s S341 Timer 3 `ui 1 h_TicsInicials 2 0 `uc 1 b_busy 1 2 ]
+"31 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
+[v _s_Timers s_Timers `[20]S341  1 e 60 0 ]
 "33
 [v _h_Tics h_Tics `ui  1 s 2 h_Tics ]
 "34
 [v _counter counter `i  1 s 2 counter ]
-"45 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\TLCD.c
-[v _Files Files `uc  1 s 1 Files ]
-[v _Columnes Columnes `uc  1 s 1 Columnes ]
-"46
-[v _FilaAct FilaAct `uc  1 s 1 FilaAct ]
-[v _ColumnaAct ColumnaAct `uc  1 s 1 ColumnaAct ]
-"47
-[v _Timer Timer `i  1 s 2 Timer ]
-"283
-[v _state state `uc  1 s 1 state ]
-"41 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\main.c
+"41 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "58
@@ -337,22 +274,17 @@
 {
 "27
 } 0
-"60
-[v _InitSistema InitSistema `(v  1 e 1 0 ]
-{
-"89
-} 0
 "33
 [v _RSI_High RSI_High `IIH(v  1 e 1 0 ]
 {
 "36
 } 0
-"44 C:\Users\emi_s\OneDrive\Documentos\Compus-fase-2-practica-2\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
+"44 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
 [v _RSI_Timer0 RSI_Timer0 `(v  1 e 1 0 ]
 {
-"63
+"60
 } 0
-"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17

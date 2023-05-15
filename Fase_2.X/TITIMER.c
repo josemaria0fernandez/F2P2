@@ -44,12 +44,9 @@ static int counter;
 void RSI_Timer0 (void) { 
 	// Cada 1ms, amb un error del 1,74% (segons simulador) i triga 10us
 //	IO_SetValue(GPIO_1, 1); // Per comprovar la temportització
-    	INTCONbits.TMR0IF = 0;    //Resetejo el flag de peticio d'interrupcio
-        
-        TMR0H = 0xEF;
-        TMR0L = 0xBB;
-        
-        
+    INTCONbits.TMR0IF = 0;    //Resetejo el flag de peticio d'interrupcio
+    TMR0H = 0xEF;
+    TMR0L = 0xBB;
 	h_Tics++;
 
 	if (h_Tics>=TI_MAXTICS) {

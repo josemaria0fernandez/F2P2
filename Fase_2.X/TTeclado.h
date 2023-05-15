@@ -17,14 +17,14 @@
 
 
  unsigned char teclas[9][5] = {"1111-",
-                                    "ABC2-",
-                                    "DEF3-",
-                                    "GHI4-",
-                                    "JKL5-",
-                                    "MNO6-",
-                                    "PQRS7",
-                                    "TUV8-",
-                                    "WXYZ9"};
+                               "ABC2-",
+                               "DEF3-",
+                               "GHI4-",
+                               "JKL5-",
+                               "MNO6-",
+                               "PQRS7",
+                               "TUV8-",
+                               "WXYZ9"};
 
 const unsigned char zeros[2] = "0 ";
 static unsigned char teclaPresionada;

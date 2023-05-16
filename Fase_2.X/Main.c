@@ -7,7 +7,7 @@
 
 #include <pic18f4321.h>
 #include <xc.h>
-#include "TITIMER.h"
+#include "TTIMER.h"
 
 void __interrupt() RSI_High(void);
 void main(void);

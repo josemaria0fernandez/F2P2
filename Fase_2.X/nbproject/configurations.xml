@@ -7,6 +7,7 @@
       <itemPath>TITIMER.h</itemPath>
       <itemPath>TADC.h</itemPath>
       <itemPath>TTeclado.h</itemPath>
+      <itemPath>USART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,6 +20,7 @@
       <itemPath>TITIMER.c</itemPath>
       <itemPath>TADC.c</itemPath>
       <itemPath>TTeclado.c</itemPath>
+      <itemPath>USART.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

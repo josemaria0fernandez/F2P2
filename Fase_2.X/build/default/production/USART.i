@@ -1,4 +1,4 @@
-# 1 "TTeclado.c"
+# 1 "USART.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,45 +6,18 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "TTeclado.c" 2
-# 1 "./TTeclado.h" 1
-
-
-
-# 1 "./TITIMER.h" 1
-# 24 "./TITIMER.h"
-void RSI_Timer0(void);
-
-void TiInit (void);
-
-
-
-
-
-char TiGetTimer (void);
+# 1 "USART.c" 2
 
 
 
 
 
 
-void TiResetTics (unsigned char Handle);
+
+# 1 "./USART.h" 1
 
 
 
-
-
-
-unsigned int TiGetTics (unsigned char Handle);
-# 55 "./TITIMER.h"
-void TiCloseTimer (unsigned char Handle);
-
-
-
-
-
-void TiEnd (void);
-# 4 "./TTeclado.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 3
@@ -4645,220 +4618,15 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 2 3
-# 5 "./TTeclado.h" 2
-# 19 "./TTeclado.h"
- unsigned char teclas[9][5] = {"1111-",
-                               "ABC2-",
-                               "DEF3-",
-                               "GHI4-",
-                               "JKL5-",
-                               "MNO6-",
-                               "PQRS7",
-                               "TUV8-",
-                               "WXYZ9"};
-
-const unsigned char zeros[2] = "0 ";
-static unsigned char teclaPresionada;
-static unsigned char teclado;
-static unsigned int tTecla;
-static unsigned char filas;
-static unsigned char *teclaActual;
-static signed char presionada;
-
-void motorTeclado(void);
-unsigned char* ProcesaTecla(unsigned char filas,unsigned char columnas, signed char pushed);
-# 1 "TTeclado.c" 2
+# 5 "./USART.h" 2
 
 
 
 
-void InitTeclado(){
-    teclado = TiGetTimer();
-    tTecla = TiGetTimer();
-    teclaPresionada = 0;
-    presionada = -1;
-
-}
 
 
-void motorTeclado(void) {
- static char state = 0;
+typedef struct{
 
-    if(TiGetTics(tTecla) >= 2400 && presionada != -1){
-        presionada = -1;
+}Usart_Config_Type;
+# 8 "USART.c" 2
 
-
-    }
- switch(state) {
-  case 0:
-   if ((PORTB & 0x07) == 0x07) {
-    filas++;
-                LATCbits.LATC0 = 1;
-    LATCbits.LATC1 = 0;
-
-                state = 1;
-   }
-   else if ((PORTB & 0x07) != 0x07) {
-    TiResetTics(teclado);
-    state = 4;
-   }
-            break;
-  case 1:
-   if ((PORTB & 0x07) == 0x07) {
-    filas++;
-
-    LATCbits.LATC1 = 1;
-    LATCbits.LATC2 = 0;
-
-    state = 2;
-   }
-   else if ((PORTB & 0x07) != 0x07) {
-    TiResetTics(teclado);
-    state = 4;
-   }
-            break;
-  case 2:
-   if ((PORTB & 0x07) == 0x07) {
-
-                filas++;
-
-    LATCbits.LATC2 = 1;
-                LATCbits.LATC3 = 0;
-    state = 3;
-   }
-   else if ((PORTB & 0x07) != 0x07) {
-    TiResetTics(teclado);
-    state = 4;
-   }
-            break;
-  case 3:
-   if ((PORTB & 0x07) == 0x07) {
-    filas = 0;
-                LATCbits.LATC0 = 0;
-                LATCbits.LATC3 = 1;
-
-    state = 0;
-   }
-   else if ( (PORTB & 0x07) != 0x07) {
-    TiResetTics(teclado);
-    state = 4;
-   }
-            break;
-  case 4:
-            if (TiGetTics(teclado) >= 0x20){
-
-                state = 5;
-            }
-            break;
-  case 5:
-   if ((PORTB & 0x07) != 0x07) {
-    if(filas != 3){
-                    if(teclaActual == ProcesaTecla(filas,(PORTB & 0x07),presionada)){
-                        TiResetTics(tTecla);
-                        presionada++;
-                        teclaActual++;
-                        if(*teclaActual == '-') {
-                            presionada = 0;
-                            teclaActual = teclaActual - 4;
-                        } else if(presionada == 5){
-                            presionada = 0;
-                            teclaActual-=5;
-                        }
-
-
-                    } else {
-                        if(presionada != -1) {
-
-                        }
-                        presionada = 0;
-                        teclaActual = ProcesaTecla(filas,(PORTB & 0x07),presionada);
-
-                        TiResetTics(tTecla);
-                    }
-
-                } else{
-
-                    if((PORTB & 0x07) == 3){
-
-                        if(presionada != -1){
-
-                        }
-
-                    } else if((PORTB & 0x07) == 6){
-
-                        if(presionada != -1){
-
-                        }
-                    } else if((PORTB & 0x07) == 5) {
-
-                        if(*teclaActual == zeros[presionada]){
-                            presionada++;
-                            presionada = presionada & 0x01;
-
-                            teclaActual = &zeros[presionada];
-
-                        } else {
-                            if(presionada != -1){
-
-                            }
-                            presionada = 0;
-
-                            teclaActual = &zeros[presionada];
-
-                        }
-                    }
-
-                    TiResetTics(tTecla);
-                }
-                state = 6;
-   }
-   else if ((PORTB & 0x07) == 0x07) {
-    LATCbits.LATC0 = 0;
-    LATCbits.LATC1 = 1;
-    LATCbits.LATC2 = 1;
-    LATCbits.LATC3 = 1;
-    state = 0;
-
-   }
-            break;
-  case 6:
-   if ((PORTB & 0x07) == 0x07) {
-    TiResetTics(teclado);
-    state = 7;
-   }
-            break;
-  case 7:
-
-
-            if (TiGetTics(teclado) >= 0x20){
-
-                state = 8;
-            }
-
-            break;
-  case 8:
-   if ((PORTB & 0x07) != 0x07) {
-    state = 6;
-   }
-   else if ((PORTB & 0x07) == 0x07) {
-
-                LATCbits.LATC0 = 0;
-    LATCbits.LATC1 = 1;
-    LATCbits.LATC2 = 1;
-    LATCbits.LATC3 = 1;
-    state = 0;
-   }
-            break;
- }
-}
-
-unsigned char* ProcesaTecla(unsigned char filas,unsigned char columnas,signed char presionada){
-    unsigned char *keyPointer;
-    unsigned char columnActual = columnas;
-    if(columnas == 3) columnActual++;
-    teclaPresionada = (6-columnActual)+3*filas;
-    keyPointer = &teclas[teclaPresionada][presionada];
-    teclaPresionada = teclaPresionada + 1 + '0';
-
-    return keyPointer;
-}

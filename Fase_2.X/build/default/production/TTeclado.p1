@@ -630,7 +630,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 288 ]
 [e :U 287 ]
 "35
-[; ;TTeclado.c: 35:   break;
+[; ;TTeclado.c: 35:             break;
 [e $U 283  ]
 "36
 [; ;TTeclado.c: 36:   case 1:
@@ -672,7 +672,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 292 ]
 [e :U 291 ]
 "49
-[; ;TTeclado.c: 49:   break;
+[; ;TTeclado.c: 49:             break;
 [e $U 283  ]
 "50
 [; ;TTeclado.c: 50:   case 2:
@@ -714,7 +714,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 296 ]
 [e :U 295 ]
 "63
-[; ;TTeclado.c: 63:   break;
+[; ;TTeclado.c: 63:             break;
 [e $U 283  ]
 "64
 [; ;TTeclado.c: 64:   case 3:
@@ -756,7 +756,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 300 ]
 [e :U 299 ]
 "76
-[; ;TTeclado.c: 76:   break;
+[; ;TTeclado.c: 76:             break;
 [e $U 283  ]
 "77
 [; ;TTeclado.c: 77:   case 4:
@@ -773,7 +773,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 302 ]
 "82
-[; ;TTeclado.c: 82:   break;
+[; ;TTeclado.c: 82:             break;
 [e $U 283  ]
 "83
 [; ;TTeclado.c: 83:   case 5:
@@ -977,7 +977,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 324 ]
 [e :U 323 ]
 "153
-[; ;TTeclado.c: 153:   break;
+[; ;TTeclado.c: 153:             break;
 [e $U 283  ]
 "154
 [; ;TTeclado.c: 154:   case 6:
@@ -997,7 +997,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 326 ]
 "159
-[; ;TTeclado.c: 159:   break;
+[; ;TTeclado.c: 159:             break;
 [e $U 283  ]
 "160
 [; ;TTeclado.c: 160:   case 7:
@@ -1014,7 +1014,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 328 ]
 "168
-[; ;TTeclado.c: 168:   break;
+[; ;TTeclado.c: 168:             break;
 [e $U 283  ]
 "169
 [; ;TTeclado.c: 169:   case 8:
@@ -1056,7 +1056,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 332 ]
 [e :U 331 ]
 "181
-[; ;TTeclado.c: 181:   break;
+[; ;TTeclado.c: 181:             break;
 [e $U 283  ]
 "182
 [; ;TTeclado.c: 182:  }
@@ -1095,7 +1095,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _columnActual `uc ~T0 @X0 1 a ]
 [e = _columnActual _columnas ]
 "188
-[; ;TTeclado.c: 188:      if(columnas == 3) columnActual++;
+[; ;TTeclado.c: 188:     if(columnas == 3) columnActual++;
 [e $ ! == -> _columnas `i -> 3 `i 334  ]
 [e ++ _columnActual -> -> 1 `i `uc ]
 [e :U 334 ]
@@ -1106,7 +1106,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;TTeclado.c: 190:     keyPointer = &teclas[teclaPresionada][presionada];
 [e = _keyPointer &U *U + &U *U + &U _teclas * -> _teclaPresionada `ux -> * -> # *U &U *U &U _teclas `ui -> -> 5 `i `ui `ux * -> -> _presionada `uc `ux -> -> # *U &U *U + &U _teclas * -> _teclaPresionada `ux -> * -> # *U &U *U &U _teclas `ui -> -> 5 `i `ui `ux `ui `ux ]
 "191
-[; ;TTeclado.c: 191:     teclaPresionada = teclaPresionada +1 + '0';
+[; ;TTeclado.c: 191:     teclaPresionada = teclaPresionada + 1 + '0';
 [e = _teclaPresionada -> + -> + -> _teclaPresionada `i -> 1 `i `ui -> 48 `ui `uc ]
 "193
 [; ;TTeclado.c: 193:     return keyPointer;

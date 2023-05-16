@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
   -cn -h+dist/default/production\Fase_2.X.production.sym \
   --cmf=dist/default/production\Fase_2.X.production.cmf -z -Q18F4321 \
-  -oC:\Users\Noctis\AppData\Local\Temp\xcAs5f0.\driver_tmp_3.o \
+  -oC:\Users\Noctis\AppData\Local\Temp\xcAscb0.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Fase_2.X.production.map \
-  --md=C:\Users\Noctis\AppData\Local\Temp\xcAs5f0.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\Noctis\AppData\Local\Temp\xcAscb0.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-01FFFh -ACONST=00h-01FFFh \
   -ASMALLCONST=0200h-02FFhx30 -AMEDIUMCONST=0200h-01FFFh -ACOMRAM=01h-07Fh \
   -AABS1=00h-01FFh -ABIGRAM=01h-01FFh -ARAM=080h-0FFh,0100h-01FFh \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\Noctis\AppData\Local\Temp\xcAs5f0.\driver_tmp_9.o \
+  C:\Users\Noctis\AppData\Local\Temp\xcAscb0.\driver_tmp_9.o \
   dist/default/production\Fase_2.X.production.o 
 
 Object code version is 3.11
@@ -33,7 +33,7 @@ Machine type is 18F4321
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Noctis\AppData\Local\Temp\xcAs5f0.\driver_tmp_9.o
+C:\Users\Noctis\AppData\Local\Temp\xcAscb0.\driver_tmp_9.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                 40       40        4        4       0
@@ -44,10 +44,11 @@ dist/default/production\Fase_2.X.production.o
                 config                           300000   300000        E        0       4
                 temp                                 5D       5D        1        1       1
                 smallconst                          200      200        4      100       0
-                text4                               324      324       26      192       0
-                text3                               204      204       B6      102       0
-                text1                               356      356        2      192       0
-                text0                               34A      34A        C      192       0
+                text5                               34E      34E       26      192       0
+                text4                               204      204       B6      102       0
+                text2                               324      324       2A      192       0
+                text1                               384      384        2      192       0
+                text0                               374      374       10      192       0
                 cstackCOMRAM                         51       51        B        1       1
                 dataBANK0                            80       80       2D       80       1
                 bssCOMRAM                             1        1       50        1       1
@@ -60,10 +61,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8       38         0
                 init                                 40       40        4         0
                 reset_vec                             0        0        4         0
-                text4                               324      324       26         0
-                text3                               204      204       B6         0
-                text1                               356      356        2         0
-                text0                               34A      34A        C         0
+                text5                               34E      34E       26         0
+                text4                               204      204       B6         0
+                text2                               324      324       2A         0
+                text1                               384      384        2         0
+                text0                               374      374       10         0
                 cinit                               2BA      2BA       3C         0
                 idataBANK0                          2F6      2F6       2D         0
 
@@ -118,8 +120,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 intcode                        000008  00003C  000044         4       0  CODE    
                 dataBANK0                      000080  00002D  0000AD        80       1  BANK0   
                 smallconst                     000200  000004  000204       100       0  SMALLCON
-                text3                          000204  00011F  000323       102       0  CODE    
-                text4                          000324  000034  000358       192       0  CODE    
+                text4                          000204  00011F  000323       102       0  CODE    
+                text2                          000324  000062  000386       192       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -133,19 +135,19 @@ UNUSED ADDRESS RANGES
         CODE             000004-000007                4
                          000044-0001FF              1BC
                          000323-000323                1
-                         000358-001FFF             1CA8
+                         000386-001FFF             1C7A
         COMRAM           00005E-00007F               22
         CONST            000004-000007                4
                          000044-0001FF              1BC
                          000323-000323                1
-                         000358-001FFF             1CA8
+                         000386-001FFF             1C7A
         EEDATA           F00000-F000FF              100
         MEDIUMCONST      000323-000323                1
-                         000358-001FFF             1CA8
+                         000386-001FFF             1C7A
         RAM              0000AD-0001FF               53
         SFR              000F80-000FFF               80
         SMALLCONST       000323-000323                1
-                         000358-001FFF              100
+                         000386-001FFF              100
 
                                   Symbol Table
 
@@ -158,6 +160,7 @@ _INTCON                  (abs)        000FF2
 _INTCON2bits             (abs)        000FF1
 _INTCON3                 (abs)        000FF0
 _INTCONbits              (abs)        000FF2
+_InitSistema             text2        000324
 _JoyPosition             bssCOMRAM    00004E
 _LATA                    (abs)        000F89
 _LATAbits                (abs)        000F89
@@ -165,7 +168,7 @@ _LATCbits                (abs)        000F8B
 _PORTB                   (abs)        000F81
 _RCONbits                (abs)        000FD0
 _RSI_High                intcode      000008
-_RSI_Timer0              text3        000204
+_RSI_Timer0              text4        000204
 _T0CONbits               (abs)        000FD5
 _TMR0H                   (abs)        000FD7
 _TMR0L                   (abs)        000FD6
@@ -224,7 +227,7 @@ __Hreset_vec             reset_vec    000004
 __Hrparam                rparam       000000
 __Hsfr                   sfr          000000
 __Hsmallconst            smallconst   000204
-__Hspace_0               (abs)        000358
+__Hspace_0               (abs)        000386
 __Hspace_1               (abs)        0002E1
 __Hspace_2               (abs)        000000
 __Hspace_4               (abs)        60000E
@@ -234,8 +237,9 @@ __Htemp                  temp         00005E
 __Htext                  text         000000
 __Htext0                 text0        000000
 __Htext1                 text1        000000
-__Htext3                 text3        000000
+__Htext2                 text2        000000
 __Htext4                 text4        000000
+__Htext5                 text5        000000
 __LRAM                   (abs)        000001
 __L__absolute__          __absolute__ 000000
 __Labs1                  abs1         000000
@@ -298,9 +302,10 @@ __Ltemp                  temp         00005D
 __Ltext                  text         000000
 __Ltext0                 text0        000000
 __Ltext1                 text1        000000
-__Ltext3                 text3        000000
+__Ltext2                 text2        000000
 __Ltext4                 text4        000000
-__S0                     (abs)        000358
+__Ltext5                 text5        000000
+__S0                     (abs)        000386
 __S1                     (abs)        0000AD
 __S4                     (abs)        000000
 __S5                     (abs)        000000
@@ -311,18 +316,19 @@ ___intlo_sp              stack        000000
 ___param_bank            (abs)        000000
 ___rparam_used           (abs)        000001
 ___sp                    stack        000000
-___wmul                  text4        000324
+___wmul                  text5        00034E
 ___wmul@multiplicand     cstackCOMRAM 000053
 ___wmul@multiplier       cstackCOMRAM 000051
 ___wmul@product          cstackCOMRAM 000055
 __accesstop              (abs)        000080
 __activetblptr           (abs)        000002
+__end_of_InitSistema     text2        00034E
 __end_of_RSI_High        intcode      000040
-__end_of_RSI_Timer0      text3        0002BA
-__end_of___wmul          text4        00034A
+__end_of_RSI_Timer0      text4        0002BA
+__end_of___wmul          text5        000374
 __end_of__initialization cinit        0002E8
-__end_of_initCPU         text1        000358
-__end_of_main            text0        000356
+__end_of_initCPU         text1        000386
+__end_of_main            text0        000384
 __end_of_zeros           smallconst   000203
 __initialization         cinit        0002BA
 __mediumconst            mediumconst  000000
@@ -334,19 +340,20 @@ __pdataBANK0             dataBANK0    000080
 __pidataBANK0            idataBANK0   0002F6
 __pintcode               intcode      000008
 __psmallconst            smallconst   000200
-__ptext0                 text0        00034A
-__ptext1                 text1        000356
-__ptext3                 text3        000204
-__ptext4                 text4        000324
+__ptext0                 text0        000374
+__ptext1                 text1        000384
+__ptext2                 text2        000324
+__ptext4                 text4        000204
+__ptext5                 text5        00034E
 __ramtop                 ramtop       000200
 __smallconst             smallconst   000200
 _counter                 bssCOMRAM    000041
 _direction               bssCOMRAM    00004D
 _filas                   bssCOMRAM    000049
 _h_Tics                  bssCOMRAM    000043
-_initCPU                 text1        000356
+_initCPU                 text1        000384
 _isCentered              bitbssCOMRAM 0002E0
-_main                    text0        00034A
+_main                    text0        000374
 _presionada              bssCOMRAM    000048
 _s_Timers                bssCOMRAM    000001
 _tTecla                  bssCOMRAM    00003F
@@ -392,14 +399,15 @@ shared
 shared estimated size: 48
 
 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
-		___wmul        		CODE           	0324	0000	38
+		___wmul        		CODE           	034E	0000	38
 
 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c estimated size: 38
 
 main.c
-		_main          		CODE           	034A	0000	12
+		_InitSistema   		CODE           	0324	0000	42
+		_main          		CODE           	0374	0000	16
 		_RSI_High      		CODE           	0008	0000	56
-		_initCPU       		CODE           	0356	0000	2
+		_initCPU       		CODE           	0384	0000	2
 
-main.c estimated size: 70
+main.c estimated size: 116
 

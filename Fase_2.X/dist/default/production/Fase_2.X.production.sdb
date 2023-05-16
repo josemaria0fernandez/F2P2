@@ -35,6 +35,8 @@
 [v _RSI_High RSI_High `IIH(v  1 e 1 0 ]
 "41
 [v _main main `(v  1 e 1 0 ]
+"62
+[v _InitSistema InitSistema `(v  1 e 1 0 ]
 "44 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
 [v _RSI_Timer0 RSI_Timer0 `(v  1 e 1 0 ]
 "91
@@ -71,7 +73,7 @@
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 "988
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S257 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S261 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -81,7 +83,7 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "1015
-[s S266 . 1 `uc 1 LA0 1 0 :1:0 
+[s S270 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -90,9 +92,9 @@
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S275 . 1 `S257 1 . 1 0 `S266 1 . 1 0 ]
-[v _LATAbits LATAbits `VES275  1 e 1 @3977 ]
-[s S484 . 1 `uc 1 LATC0 1 0 :1:0 
+[u S279 . 1 `S261 1 . 1 0 `S270 1 . 1 0 ]
+[v _LATAbits LATAbits `VES279  1 e 1 @3977 ]
+[s S488 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -102,7 +104,7 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "1239
-[s S493 . 1 `uc 1 LC0 1 0 :1:0 
+[s S497 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -111,8 +113,8 @@
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S502 . 1 `S484 1 . 1 0 `S493 1 . 1 0 ]
-[v _LATCbits LATCbits `VES502  1 e 1 @3979 ]
+[u S506 . 1 `S488 1 . 1 0 `S497 1 . 1 0 ]
+[v _LATCbits LATCbits `VES506  1 e 1 @3979 ]
 "1488
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "1710
@@ -123,56 +125,56 @@
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
 "4716
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S78 . 1 `uc 1 . 1 0 :1:0 
+[s S82 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "4845
-[s S81 . 1 `uc 1 ADON 1 0 :1:0 
+[s S85 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S85 . 1 `uc 1 . 1 0 :1:0 
+[s S89 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S92 . 1 `uc 1 . 1 0 :1:0 
+[s S96 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S95 . 1 `uc 1 . 1 0 :1:0 
+[s S99 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S98 . 1 `uc 1 . 1 0 :1:0 
+[s S102 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S101 . 1 `uc 1 . 1 0 :1:0 
+[s S105 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S104 . 1 `uc 1 . 1 0 :1:0 
+[s S108 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S107 . 1 `S78 1 . 1 0 `S81 1 . 1 0 `S85 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 `S104 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES107  1 e 1 @4034 ]
+[u S111 . 1 `S82 1 . 1 0 `S85 1 . 1 0 `S89 1 . 1 0 `S96 1 . 1 0 `S99 1 . 1 0 `S102 1 . 1 0 `S105 1 . 1 0 `S108 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES111  1 e 1 @4034 ]
 "4934
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S151 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S155 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "5724
-[s S153 . 1 `uc 1 . 1 0 :1:0 
+[s S157 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S156 . 1 `uc 1 . 1 0 :2:0 
+[s S160 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S159 . 1 `uc 1 . 1 0 :3:0 
+[s S163 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S162 . 1 `uc 1 . 1 0 :4:0 
+[s S166 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S165 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S169 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -180,7 +182,7 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S173 . 1 `uc 1 BOR 1 0 :1:0 
+[s S177 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -188,9 +190,9 @@
 `uc 1 . 1 0 :1:5 
 `uc 1 SBOREN 1 0 :1:6 
 ]
-[u S181 . 1 `S151 1 . 1 0 `S153 1 . 1 0 `S156 1 . 1 0 `S159 1 . 1 0 `S162 1 . 1 0 `S165 1 . 1 0 `S173 1 . 1 0 ]
-[v _RCONbits RCONbits `VES181  1 e 1 @4048 ]
-[s S373 . 1 `uc 1 T0PS 1 0 :3:0 
+[u S185 . 1 `S155 1 . 1 0 `S157 1 . 1 0 `S160 1 . 1 0 `S163 1 . 1 0 `S166 1 . 1 0 `S169 1 . 1 0 `S177 1 . 1 0 ]
+[v _RCONbits RCONbits `VES185  1 e 1 @4048 ]
+[s S377 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -198,25 +200,25 @@
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "6205
-[s S380 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S384 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 T016BIT 1 0 :1:6 
 ]
-[u S386 . 1 `S373 1 . 1 0 `S380 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES386  1 e 1 @4053 ]
+[u S390 . 1 `S377 1 . 1 0 `S384 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES390  1 e 1 @4053 ]
 "6267
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "6274
 [v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
 "6539
 [v _INTCON3 INTCON3 `VEuc  1 e 1 @4080 ]
-[s S220 . 1 `uc 1 . 1 0 :7:0 
+[s S224 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "6656
-[s S223 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S227 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -225,11 +227,11 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S232 . 1 `uc 1 . 1 0 :7:0 
+[s S236 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S235 . 1 `S220 1 . 1 0 `S223 1 . 1 0 `S232 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES235  1 e 1 @4081 ]
+[u S239 . 1 `S224 1 . 1 0 `S227 1 . 1 0 `S236 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES239  1 e 1 @4081 ]
 "6701
 [v _INTCON INTCON `VEuc  1 e 1 @4082 ]
 [s S24 . 1 `uc 1 RBIF 1 0 :1:0 
@@ -257,9 +259,9 @@
 ]
 [u S46 . 1 `S24 1 . 1 0 `S33 1 . 1 0 `S42 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES46  1 e 1 @4082 ]
-[s S341 Timer 3 `ui 1 h_TicsInicials 2 0 `uc 1 b_busy 1 2 ]
+[s S345 Timer 3 `ui 1 h_TicsInicials 2 0 `uc 1 b_busy 1 2 ]
 "31 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\TITIMER.c
-[v _s_Timers s_Timers `[20]S341  1 e 60 0 ]
+[v _s_Timers s_Timers `[20]S345  1 e 60 0 ]
 "33
 [v _h_Tics h_Tics `ui  1 s 2 h_Tics ]
 "34
@@ -267,12 +269,17 @@
 "41 C:\Users\Noctis\Documents\Compus-fase-2-practica-2\Fase_2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"58
+"60
 } 0
 "16
 [v _initCPU initCPU `(v  1 e 1 0 ]
 {
 "27
+} 0
+"62
+[v _InitSistema InitSistema `(v  1 e 1 0 ]
+{
+"91
 } 0
 "33
 [v _RSI_High RSI_High `IIH(v  1 e 1 0 ]

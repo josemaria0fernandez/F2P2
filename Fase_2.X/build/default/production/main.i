@@ -4683,10 +4683,10 @@ static char mask;
 void main(void) {
 
     initCPU();
-
+    InitSistema();
 
     while(1){
-# 56 "main.c"
+# 58 "main.c"
  }
     return;
 }
@@ -4708,5 +4708,5 @@ void InitSistema(void){
     INTCON3 = 0x00;
     LATA = 0;
     LATAbits.LATA4 = 0;
-# 89 "main.c"
+# 91 "main.c"
 }

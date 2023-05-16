@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Main.c USART.c TADC.c TLCD.c TSIO.c TTeclado.c TTimer.c
+SOURCEFILES_QUOTED_IF_SPACED=Main.c USART.c TADC.c TLCD.c TSIO.c TTeclado.c TTimer.c TSpeaker.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/TADC.p1 ${OBJECTDIR}/TLCD.p1 ${OBJECTDIR}/TSIO.p1 ${OBJECTDIR}/TTeclado.p1 ${OBJECTDIR}/TTimer.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/Main.p1.d ${OBJECTDIR}/USART.p1.d ${OBJECTDIR}/TADC.p1.d ${OBJECTDIR}/TLCD.p1.d ${OBJECTDIR}/TSIO.p1.d ${OBJECTDIR}/TTeclado.p1.d ${OBJECTDIR}/TTimer.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/TADC.p1 ${OBJECTDIR}/TLCD.p1 ${OBJECTDIR}/TSIO.p1 ${OBJECTDIR}/TTeclado.p1 ${OBJECTDIR}/TTimer.p1 ${OBJECTDIR}/TSpeaker.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/Main.p1.d ${OBJECTDIR}/USART.p1.d ${OBJECTDIR}/TADC.p1.d ${OBJECTDIR}/TLCD.p1.d ${OBJECTDIR}/TSIO.p1.d ${OBJECTDIR}/TTeclado.p1.d ${OBJECTDIR}/TTimer.p1.d ${OBJECTDIR}/TSpeaker.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/TADC.p1 ${OBJECTDIR}/TLCD.p1 ${OBJECTDIR}/TSIO.p1 ${OBJECTDIR}/TTeclado.p1 ${OBJECTDIR}/TTimer.p1
+OBJECTFILES=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/TADC.p1 ${OBJECTDIR}/TLCD.p1 ${OBJECTDIR}/TSIO.p1 ${OBJECTDIR}/TTeclado.p1 ${OBJECTDIR}/TTimer.p1 ${OBJECTDIR}/TSpeaker.p1
 
 # Source Files
-SOURCEFILES=Main.c USART.c TADC.c TLCD.c TSIO.c TTeclado.c TTimer.c
+SOURCEFILES=Main.c USART.c TADC.c TLCD.c TSIO.c TTeclado.c TTimer.c TSpeaker.c
 
 
 
@@ -150,6 +150,14 @@ ${OBJECTDIR}/TTimer.p1: TTimer.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/TTimer.d ${OBJECTDIR}/TTimer.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/TTimer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/TSpeaker.p1: TSpeaker.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TSpeaker.p1.d 
+	@${RM} ${OBJECTDIR}/TSpeaker.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3    -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/TSpeaker.p1 TSpeaker.c 
+	@-${MV} ${OBJECTDIR}/TSpeaker.d ${OBJECTDIR}/TSpeaker.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/TSpeaker.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/Main.p1: Main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -206,6 +214,14 @@ ${OBJECTDIR}/TTimer.p1: TTimer.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c    -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/TTimer.p1 TTimer.c 
 	@-${MV} ${OBJECTDIR}/TTimer.d ${OBJECTDIR}/TTimer.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/TTimer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/TSpeaker.p1: TSpeaker.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TSpeaker.p1.d 
+	@${RM} ${OBJECTDIR}/TSpeaker.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c    -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/TSpeaker.p1 TSpeaker.c 
+	@-${MV} ${OBJECTDIR}/TSpeaker.d ${OBJECTDIR}/TSpeaker.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/TSpeaker.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

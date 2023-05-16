@@ -19,7 +19,7 @@
 // el fastig?s busy est? a 1...
 
 #include <xc.h>
-#include "TITIMER.h"
+#include "TTIMER.h"
 #include "TLCD.h"
 #include <pic18f4321.h>
 
@@ -285,7 +285,8 @@ void motorLCD(void) {
 	
     
 	switch(state) {
-		case 0:
+        //miramos en qué posición debemos empezar a mostrar. si hay marquesina o no, se deberá mover la posición de Inicio
+		case 0: 
 			if (marquesina == NO_MARQUESINA) {
 				posFila = 0;
                 
@@ -317,6 +318,7 @@ void motorLCD(void) {
             }
 		break;
 		case 1:
+            // printamos según la cadena que toca
  			if (++countImp <= MAXCOLUMNAS && cadenaEscritura[cadenaActual][posFila] != '\0') {
                 LcPutChar(cadenaEscritura[cadenaActual][posFila]); 
                 posFila++; 
@@ -343,6 +345,8 @@ void motorLCD(void) {
             
 		break;
 		case 2:
+            //entramos solo si nos pasamos de 16 letras, por lo cual hay una marquesina inferior o superior
+            //revisamos si hemos escrito las 4 cadenas, si no, volvemos al estado 0
 			if (cadenaActual < 4) {
                 countImp = 0;
 				if(cadenaActual == 2)LcGotoXY(0,1);
@@ -361,6 +365,7 @@ void motorLCD(void) {
             
 		break;
 		case 3:
+            //entramos cuando acabenmos de escribir las 4 cadenas. según qué modo estamos, se hace un incremento o no a la posición de inicio de las cadenas
             if(TiGetTics(tLCD) >= 1000 && marquesina == SUPERIOR){
                 posInicio++;
                 if(cadenaEscritura[0][posInicio] == '\0'){
@@ -419,6 +424,7 @@ void motorLCD(void) {
         
        
         case 11:
+            //envia los espacios para el modo marquesina doble y así mantiene una misma distancia entre las cadenas
             if(countImp <= MAXCOLUMNAS && posFila <= MAXCOLUMNAS){
                 LcPutChar(' ');
                 countImp++;

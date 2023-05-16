@@ -10,6 +10,7 @@
       <itemPath>TTeclado.h</itemPath>
       <itemPath>TSIO.h</itemPath>
       <itemPath>TTimer.h</itemPath>
+      <itemPath>TSpeaker.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -25,6 +26,7 @@
       <itemPath>TSIO.c</itemPath>
       <itemPath>TTeclado.c</itemPath>
       <itemPath>TTimer.c</itemPath>
+      <itemPath>TSpeaker.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

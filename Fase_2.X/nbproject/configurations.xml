@@ -4,9 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>TITIMER.h</itemPath>
-      <itemPath>TADC.h</itemPath>
-      <itemPath>TTeclado.h</itemPath>
+      <itemPath>Adc.h</itemPath>
+      <itemPath>Lcd.h</itemPath>
+      <itemPath>Sio.h</itemPath>
+      <itemPath>Teclado.h</itemPath>
+      <itemPath>Timer.h</itemPath>
       <itemPath>USART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -16,10 +18,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
-      <itemPath>TITIMER.c</itemPath>
-      <itemPath>TADC.c</itemPath>
-      <itemPath>TTeclado.c</itemPath>
+      <itemPath>Adc.c</itemPath>
+      <itemPath>Lcd.c</itemPath>
+      <itemPath>Main.c</itemPath>
+      <itemPath>Sio.c</itemPath>
+      <itemPath>Teclado.c</itemPath>
+      <itemPath>Timer.c</itemPath>
       <itemPath>USART.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -41,14 +45,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.36</languageToolchainVersion>
+        <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="PIC18Fxxxx_DFP" vendor="Microchip" version="1.0.9"/>
       </packs>
-      <ScriptingSettings>
-      </ScriptingSettings>
       <compileType>
         <linkerTool>
           <linkerLibItems>
@@ -66,7 +68,6 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -153,10 +154,6 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
-      <XC8-CO>
-        <property key="coverage-enable" value=""/>
-        <property key="stack-guidance" value="false"/>
-      </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
         <property key="gcc-opt-driver-new" value="true"/>

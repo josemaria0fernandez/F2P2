@@ -1,7 +1,7 @@
 #ifndef TTECLADO_H
 #define TTECLADO_H
 
-#include "TITIMER.h"
+#include "TTIMER.h"
 #include <xc.h>
 
 #define Columnas (PORTB & 0x07) 
